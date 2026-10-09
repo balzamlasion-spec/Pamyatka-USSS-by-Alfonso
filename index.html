@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>USSS Orlando | Памятка сотрудника</title>
+<style>
+  :root{
+    --green:#00ff88;--yellow:#ffd700;--red:#ff3b3b;--blue:#3b82f6;
+    --purple:#a855f7;--orange:#ff8c42;--teal:#14b8a6;--pink:#ec4899;
+    --neon-green:#00ff88;--neon-red:#ff0040;--neon-blue:#00d4ff;--neon-purple:#d946ef;
+    --dark:#0a0612;--dark2:#150f24;--card:#1a1128;--card-hover:#251736;
+    --text:#f0e6ff;--muted:#a89cc8;--border:#3a2a55;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Segoe UI',Tahoma,sans-serif;background:#0a0612;color:var(--text);line-height:1.65;padding-bottom:60px;min-height:100vh}
+  header{background:linear-gradient(135deg,#1a1128,#150f24);padding:18px;border-bottom:2px solid var(--neon-purple);position:sticky;top:0;z-index:100;box-shadow:0 4px 15px rgba(0,0,0,.6)}
+  .header-inner{max-width:1300px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  header h1{font-size:1.3rem;white-space:nowrap;font-weight:900;background:linear-gradient(90deg,#00ff88,#3b82f6,#a855f7,#ff3b3b);-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:.5px}
+  .search-box{flex:1;min-width:240px;max-width:500px;position:relative}
+  .search-box input{width:100%;padding:11px 55px 11px 16px;font-size:.95rem;border:2px solid var(--border);border-radius:12px;background:#150f24;color:var(--text);outline:none;font-family:inherit}
+  .search-box input:focus{border-color:var(--neon-purple);box-shadow:0 0 0 3px rgba(168,85,247,.15)}
+  .search-box input::placeholder{color:#7c6ba0}
+  .search-count{position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:.78rem;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--neon-green),var(--neon-blue));padding:3px 10px;border-radius:8px;pointer-events:none;display:none}
+  .search-count.show{display:block}
+  .tabs{background:#150f24;border-bottom:1px solid var(--border);overflow-x:auto;white-space:nowrap;padding:0 20px}
+  .tabs-inner{max-width:1300px;margin:0 auto;display:inline-flex;gap:3px}
+  .tab-btn{background:none;border:none;color:var(--muted);padding:15px 16px;font-size:.88rem;font-weight:600;cursor:pointer;border-bottom:3px solid transparent;font-family:inherit;white-space:nowrap}
+  .tab-btn:hover{color:var(--text)}
+  .tab-btn.active{color:#fff;border-bottom-color:var(--neon-purple);background:rgba(168,85,247,.1)}
+  main{max-width:1300px;margin:0 auto;padding:24px 20px}
+  .tab-content{display:none}
+  .tab-content.active{display:block}
+  .section{margin-bottom:24px;border-radius:14px;overflow:hidden;background:linear-gradient(135deg,#1a1128,#150f24);border:1px solid var(--border);box-shadow:0 4px 15px rgba(0,0,0,.4)}
+  .section-title{padding:14px 20px;font-size:1.1rem;font-weight:800;display:flex;align-items:center;gap:10px;background:linear-gradient(90deg,rgba(59,130,246,.25),transparent);border-left:5px solid var(--blue)}
+  .section-title.green{background:linear-gradient(90deg,rgba(0,255,136,.2),transparent);border-left-color:var(--neon-green)}
+  .section-title.yellow{background:linear-gradient(90deg,rgba(255,215,0,.2),transparent);border-left-color:var(--yellow)}
+  .section-title.red{background:linear-gradient(90deg,rgba(255,59,59,.25),transparent);border-left-color:var(--neon-red)}
+  .section-title.purple{background:linear-gradient(90deg,rgba(168,85,247,.25),transparent);border-left-color:var(--neon-purple)}
+  .section-title.orange{background:linear-gradient(90deg,rgba(255,140,66,.2),transparent);border-left-color:var(--orange)}
+  .section-title.teal{background:linear-gradient(90deg,rgba(20,184,166,.2),transparent);border-left-color:var(--teal)}
+  .section-title.pink{background:linear-gradient(90deg,rgba(236,72,153,.2),transparent);border-left-color:var(--pink)}
+  .section-title.gold{background:linear-gradient(90deg,rgba(255,215,0,.3),transparent);border-left-color:var(--yellow)}
+  .section-body{background:transparent;padding:4px 0}
+  .card{padding:15px 20px;border-bottom:1px solid var(--border)}
+  .card:last-child{border-bottom:none}
+  .card:hover{background:rgba(168,85,247,.05)}
+  .card h4{font-size:.98rem;color:#fff;margin-bottom:8px;display:flex;gap:8px;align-items:flex-start;line-height:1.4;font-weight:700}
+  .card h4::before{content:"◆";color:var(--neon-purple);flex-shrink:0}
+  .card p{font-size:.92rem;color:#d5cbef;margin:6px 0;padding-left:16px}
+  .card strong{color:#fff}
+  .card .mark{color:var(--yellow);font-weight:700}
+  .card code{background:rgba(59,130,246,.15);color:#9ecbff;padding:2px 8px;border-radius:6px;font-family:Consolas,monospace;font-size:.85rem}
+  .quote{background:rgba(0,255,136,.08);border-left:3px solid var(--neon-green);padding:10px 14px;margin:10px 0 8px 16px;border-radius:0 8px 8px 0;font-style:italic;color:#d3efdc;font-size:.9rem}
+  .law{display:inline-block;background:rgba(255,215,0,.12);color:var(--yellow);padding:2px 10px;border-radius:6px;font-size:.76rem;margin:6px 4px 4px 16px;font-family:Consolas,monospace;border:1px solid rgba(255,215,0,.2)}
+  .alert{padding:12px 18px;margin:10px 14px;border-radius:10px;font-size:.9rem}
+  .alert.red{background:rgba(255,59,59,.12);border-left:4px solid var(--neon-red);color:#ffd6d1}
+  .alert.yellow{background:rgba(255,215,0,.12);border-left:4px solid var(--yellow);color:#fff3c4}
+  .alert.blue{background:rgba(59,130,246,.12);border-left:4px solid var(--neon-blue);color:#d6e6f8}
+  .alert.green{background:rgba(0,255,136,.1);border-left:4px solid var(--neon-green);color:#d3efdc}
+  .alert.purple{background:rgba(168,85,247,.12);border-left:4px solid var(--neon-purple);color:#e8d4f0}
+  .table-wrap{overflow-x:auto;padding:8px}
+  table{width:100%;border-collapse:collapse;font-size:.85rem}
+  th{background:linear-gradient(135deg,rgba(59,130,246,.3),rgba(168,85,247,.2));color:#fff;padding:11px 12px;text-align:left;font-weight:700;border-bottom:2px solid var(--neon-blue)}
+  td{padding:9px 12px;border-bottom:1px solid var(--border);color:#cfd4da;vertical-align:top}
+  tr:hover td{background:rgba(168,85,247,.05)}
+  td.fine{color:var(--neon-green);font-weight:700;white-space:nowrap}
+  td.punish{color:var(--neon-red);font-weight:700}
+  td.num{color:var(--yellow);font-family:Consolas,monospace;white-space:nowrap;font-weight:600}
+  .badge{display:inline-block;padding:2px 8px;border-radius:6px;font-size:.72rem;font-weight:700}
+  .badge.red{background:rgba(255,59,59,.2);color:#ff8080;border:1px solid rgba(255,59,59,.4)}
+  .badge.gray{background:rgba(168,156,200,.15);color:#a89cc8;border:1px solid rgba(168,156,200,.3)}
+  .links-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;padding:8px 0}
+  .link-card{display:block;text-decoration:none;color:inherit;background:#1a1128;border:1px solid var(--border);border-radius:12px;padding:18px 20px;position:relative;overflow:hidden;transition:border-color .2s}
+  .link-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--neon-green),var(--neon-blue))}
+  .link-card:hover{border-color:var(--neon-purple)}
+  .link-card .ic{font-size:1.6rem;display:block;margin-bottom:6px}
+  .link-card .ttl{font-size:.95rem;font-weight:700;color:#fff;margin-bottom:4px}
+  .link-card .dsc{font-size:.8rem;color:var(--muted)}
+  .qa{margin:8px 16px;border-left:3px solid var(--neon-purple);background:rgba(168,85,247,.08);border-radius:0 8px 8px 0;padding:10px 14px}
+  .qa .q{color:#e8b3ff;font-weight:700;font-size:.9rem;margin-bottom:4px}
+  .qa .a{color:#d3c0e0;font-size:.88rem}
+  mark.hl{background:rgba(255,215,0,.5);color:#fff;padding:1px 3px;border-radius:3px;font-weight:700}
+  footer{text-align:center;padding:30px 20px;color:var(--muted);font-size:.82rem;border-top:1px solid var(--border);margin-top:40px}
+  #topBtn{position:fixed;bottom:22px;right:22px;background:linear-gradient(135deg,var(--neon-purple),var(--neon-blue));color:#fff;border:none;width:46px;height:46px;border-radius:50%;font-size:1.2rem;cursor:pointer;box-shadow:0 4px 15px rgba(168,85,247,.5);display:none;z-index:200}
+  #topBtn.show{display:block}
+  ::-webkit-scrollbar{width:10px;height:10px}
+  ::-webkit-scrollbar-track{background:var(--dark)}
+  ::-webkit-scrollbar-thumb{background:var(--purple);border-radius:5px}
+  /* ЧАСЫ + КНОПКИ В ШАПКЕ */
+  .header-right{display:flex;align-items:center;gap:10px}
+  .clock{font-family:Consolas,monospace;font-size:.88rem;color:#9ecbff;background:#141420;padding:6px 12px;border-radius:6px;border:1px solid var(--border);white-space:nowrap;font-weight:600}
+  .header-btn{background:#2a2a40;color:#fff;border:1px solid var(--border);padding:7px 12px;border-radius:6px;font-size:1rem;cursor:pointer;font-family:inherit}
+  .header-btn:hover{background:#3b82f6;border-color:#3b82f6}
+  .tab-count{display:inline-block;background:#3b82f6;color:#fff;font-size:.7rem;font-weight:700;padding:2px 7px;border-radius:10px;margin-left:4px;vertical-align:middle}
+  /* ФИЛЬТРЫ В УК */
+  .uk-filters{background:#2a2a40;border:1px solid var(--border);border-radius:10px;padding:14px 18px;margin-bottom:16px}
+  .filter-group{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:10px}
+  .filter-group:last-of-type{margin-bottom:0}
+  .filter-label{font-size:.88rem;color:#c8c8d8;font-weight:600;margin-right:6px}
+  .filter-btn{background:#1c1c2e;color:#c8c8d8;border:1px solid var(--border);padding:6px 12px;border-radius:6px;font-size:.82rem;cursor:pointer;font-family:inherit;font-weight:600}
+  .filter-btn:hover{background:#33334a;color:#fff}
+  .filter-btn.active{background:#3b82f6;color:#fff;border-color:#3b82f6}
+  .filter-stats{font-size:.82rem;color:#9999b0;margin-top:10px;padding-top:10px;border-top:1px solid var(--border)}
+  .filter-stats strong{color:#00e070;font-weight:700}
+  /* БЫСТРЫЕ ССЫЛКИ */
+  .quick-nav{position:fixed;right:16px;top:50%;transform:translateY(-50%);background:#1c1c2e;border:1px solid var(--border);border-radius:10px;padding:10px 8px;z-index:150;max-height:80vh;overflow-y:auto}
+  .quick-nav-title{font-size:.72rem;color:#9999b0;text-align:center;margin-bottom:8px;font-weight:700;letter-spacing:.5px}
+  .quick-nav-btn{display:block;width:100%;background:none;border:none;color:#c8c8d8;padding:6px 10px;font-size:.76rem;cursor:pointer;font-family:inherit;text-align:left;border-radius:6px;white-space:nowrap}
+  .quick-nav-btn:hover{background:#3b82f6;color:#fff}
+  .quick-nav-btn.active{background:#2a2a40;color:#3b82f6;font-weight:700}
+  @media (max-width:1100px){.quick-nav{display:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <h1>🛡️ <span>USSS Orlando</span> | Памятка</h1>
+    <div class="search-box">
+      <input type="text" id="search" placeholder="🔍 Поиск: статья 7, наручники, Миранда...">
+      <span class="search-count" id="searchCount">0</span>
+    </div>
+    <div class="header-right">
+      <div class="clock" id="clock">--.--.---- --:--:--</div>
+      <button class="header-btn" id="printBtn" title="Печать активной вкладки">🖨️</button>
+    </div>
+  </div>
+</header>
+<div class="tabs">
+  <div class="tabs-inner">
+    <button class="tab-btn active" data-tab="levels">🟢🟡🔴 Уровни</button>
+    <button class="tab-btn" data-tab="uk">⚖️ УК / ПК</button>
+    <button class="tab-btn" data-tab="ukarticles">📕 Важные статьи УК <span class="tab-count" id="ukCount"></span></button>
+    <button class="tab-btn" data-tab="ak">🚗 АК / ДК</button>
+    <button class="tab-btn" data-tab="exam">🎓 ЭКЗ.БЛОК</button>
+    <button class="tab-btn" data-tab="instr">👨‍🏫 Инструктор 12рг</button>
+    <button class="tab-btn" data-tab="zot">🗺️ ЗОТ + Расписание</button>
+    <button class="tab-btn" data-tab="links">📚 Кодексы</button>
+  </div>
+</div>
+<main>
+
+<!-- ВКЛАДКА 1: УРОВНИ -->
+<div class="tab-content active" id="levels">
+
+  <div class="section">
+    <div class="section-title green">🟢 ЗЕЛЁНЫЙ УРОВЕНЬ — Гражданин ничего не нарушает</div>
+    <div class="section-body">
+      <div class="card">
+        <h4>Посетитель БЕЗ маски + ЕСТЬ цель визита</h4>
+        <p><strong>Что делать:</strong> Не трогаем. Он в холле законно.</p>
+        <span class="law">Ст. 2 Прил. №1 к УК</span>
+      </div>
+      <div class="card">
+        <h4>«На каком основании требуешь паспорт?»</h4>
+        <div class="quote">«На основании Статьи 7 Приложения №1 к УК и Статьи 6 ч.1 п."в" Закона о USSS. Я имею право проверять документы у всех посетителей правительственных зданий.»</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title yellow">🟡 ЖЁЛТЫЙ УРОВЕНЬ — Холл Капитолия</div>
+    <div class="section-body">
+      <div class="alert yellow">📌 БЛОК 1. СИТУАЦИИ С ГРАЖДАНАМИ</div>
+      <div class="card">
+        <h4>БЕЗ маски + НЕТ цели визита</h4>
+        <p>Представился → «На основании Ст. 2 Прил. №1 к УК у вас должна быть цель визита. Цели нет? Покиньте Капитолий» → 5 сек → Не ушёл? <span class="mark">🔴 Красный.</span></p>
+      </div>
+      <div class="card">
+        <h4>В МАСКЕ</h4>
+        <p>«На основании Ст. 16 ч.3 ПК и Ст. 6 ч.1 п."в" Закона о USSS, вы обязаны снять маску.» Снял → идёт. Отказался → <span class="mark">🔴 Красный.</span></p>
+      </div>
+      <div class="card">
+        <h4>Включает «дурака»</h4>
+        <p>Указываешь на маркер → Не реагирует → «На основании Прим. 1 Ст. 2 Прил. №1 к УК — покиньте Капитолий» → 5 сек → <span class="mark">Наручники 🔴.</span></p>
+      </div>
+      <div class="card">
+        <h4>Наглеет / байтит косяками</h4>
+        <div class="quote">«Законы Orlando не запрещают сотрудникам зевать. Согласно Ст. 7 Прил. №1 к УК, требую документы и цель визита.»</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title red">🔴 КРАСНЫЙ УРОВЕНЬ — Жёсткие ситуации</div>
+    <div class="section-body">
+      <div class="card">
+        <h4>Проникновение за закрытые двери</h4>
+        <p>Без предупреждений — сразу <code>/cuff</code>.</p>
+        <span class="law">Ст. 12.7 ч.1 УК — штраф 20.000–50.000 / 3 года</span>
+      </div>
+      <div class="card">
+        <h4>Игнорирование Жёлтого уровня</h4>
+        <p>Не ушёл / отказался дать паспорт / снял маску → <code>/cuff</code>.</p>
+        <span class="law">Ст. 17.6 УК — штраф 10.000–50.000 / 3 года</span>
+      </div>
+      <div class="card">
+        <h4>Матерится / танцует / кривляется</h4>
+        <p><strong>Штраф выписывать НЕ МОЖЕМ!</strong> Вызываем LSPD / Шерифа.</p>
+        <span class="law">Передача: LSPD / LSCSD</span>
+      </div>
+      <div class="card">
+        <h4>Тычет фак / оскорбляет лично тебя</h4>
+        <p>Дубинка/тайзер, наручники. В КПЗ оформляешь штраф.</p>
+        <span class="law">Ст. 17.3 УК — штраф 20.000–50.000 / 3 года</span>
+      </div>
+      <div class="card">
+        <h4>Нападение с оружием на Первое лицо</h4>
+        <p>Стадия силы №5 — огнестрел без предупреждения.</p>
+        <span class="law">Ст. 4 УК, ст. 9 Закона о USSS</span>
+        <p><strong>Супер-право:</strong> другой госник наставил ствол на Губернатора — расстрел без предупреждения.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title blue">⚖️ ОХРАНА ЗАСЕДАНИЯ СУДА</div>
+    <div class="section-body">
+      <div class="card"><p>Судья — главный. Все на позициях. Запрещено: фриковать, накидывать наручники, бегать, шуметь.</p></div>
+      <div class="card"><h4>Досмотр на входе</h4><p>Досматривать на оружие. Запускать с оружием НЕЛЬЗЯ. До суда уточнить у Судьи.</p></div>
+      <div class="card"><h4>Диалог</h4><div class="quote">«Здравствуйте, на суд? Покажите документы. С оружием нельзя. Разрешаете досмотреть?»</div></div>
+      <div class="card"><h4>Помехи</h4><p>🟡 Вывести + предупреждение. 🔴 Повторно — не пускать.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title blue">🏛️ ОХРАНА ЗАСЕДАНИЯ СЕНАТА</div>
+    <div class="section-body">
+      <div class="card"><p>На Сенат — только Сенаторы! ⚠️ USSS не имеет мандата.</p></div>
+      <div class="card"><p><strong>Пронос оружия:</strong> Ст. 15.1 УК → 5 секций, судимость, увольнение.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title purple">📌 ДВЕ ГЛАВНЫЕ ШПАРГАЛКИ</div>
+    <div class="section-body">
+      <div class="card">
+        <h4>Бронебойные ответы</h4>
+        <div class="quote">«Документы?» → Ст. 7 Прил. №1 к УК + Ст. 6 ч.1 п."в".</div>
+        <div class="quote">«Снять маску?» → Ст. 16 ч.3 ПК + Ст. 6 ч.1 п."в".</div>
+        <div class="quote">«Незаконно» → Ст. 5 ч.12 Прил. №1 к УК — основание для задержания.</div>
+      </div>
+      <div class="card">
+        <h4>Порядок ареста</h4>
+        <p>Наручники → жетон → <strong>СРАЗУ Миранда</strong> → первичный обыск → огласил статью → КПЗ (1 час) → таминг.</p>
+        <p>Судимость: ★★★★ и более или >5 лет (ст. 5.8 УК).</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title pink">🛡️ БОРЬБА С БАЙТЕРАМИ</div>
+    <div class="section-body">
+      <div class="card"><h4>Байтеры в холле</h4><p>Приказ покинуть → 5 сек → тайзер → наручники. <span class="law">Ст. 17.6 УК</span></p></div>
+      <div class="card"><h4>«Секретные агенты»</h4><p>Гражданские, называющие себя агентами — <span class="law">Ст. 15.3 ч.2 УК</span></p></div>
+      <div class="card"><h4>Конфликты в Discord</h4><p>Ст. 20 ч.1 п.е ТК. Отвечай 1 раз, сухо, ссылайся на 12-й ранг.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title blue">📻 ШАБЛОНЫ ДЛЯ РАЦИЙ</div>
+    <div class="section-body">
+      <div class="card"><h4>Гражданский (10 мин)</h4><p><code>/dep USSS TO Advocates:</code> Требуется гос.адвокат в КПЗ Капитолия. 10 минут. Код - 1.</p></div>
+      <div class="card"><h4>Госник (15 мин)</h4><p><code>/dep USSS TO LSPD/FIB/GOV:</code> Задержан сотрудник. Требуется ОГП и руководство. 15 минут. Код - 1.</p></div>
+      <div class="alert green">✅ ЛУЧШИЙ ВАРИАНТ — САМОМУ ОТВЕЗТИ!</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ВКЛАДКА 2: УК / ПК -->
+<div class="tab-content" id="uk">
+
+  <div class="section">
+    <div class="section-title blue">⛓️ ПРОЦЕСС ЗАДЕРЖАНИЯ (ст. 17 ПК)</div>
+    <div class="section-body">
+      <div class="card"><h4>Часть 1 — При ведении следствия</h4><p>1. Наручники → 2. Удостоверение → 3. Первичный обыск → 4. Основания задержания → 5. Миранда → 6. КПЗ → 7. Проверка косью/удо → 8. Права (адвокат + звонок) → 9. Вторичный обыск → 10. Обновление розыска → 11. Повторить статьи → 12. Посадить в КПЗ</p></div>
+      <div class="card"><h4>Часть 2 — На основании ордера</h4><p>1. Наручники → 2. Жетон → 3. Первичный обыск → 4. Основания → 5. Номер и название ордера (AS-001) → 6. КПЗ → 7. Идентификация → 8. Вызов руководства + ОГП (ст. 19 ПК)</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title yellow">⏱️ ВРЕМЯ</div>
+    <div class="section-body">
+      <div class="card"><p>• Ответ адвоката — 3 мин<br>• Приезд адвоката — 10 мин<br>• Ответ Прокурора — 15 мин<br>• Ответ руководства — 15 мин<br>• Телефонный звонок — 3 мин (только для вызова адвоката! ст. 17 ч.5 ПК)<br>• Конфиденциальная беседа — 10 мин<br>• Арест — 60 мин | Допрос — 60 мин</p></div>
+      <div class="alert blue">📌 <strong>Замораживает процессуальный час (ст. 20 ч.2 ПК):</strong> допрос, экспертиза, адвокат, вызов ОГП/руководства, освидетельствование EMS, обыск имущества, просмотр фиксации (макс 10 мин).</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title purple">👥 СУБЪЕКТЫ ЗАДЕРЖАНИЯ (ст. 18 ПК)</div>
+    <div class="section-body">
+      <div class="card"><p>• Сотрудник и напарники • Задержанный • Один адвокат • Один прокурор • Один агент IB • ГКА / Один ЗГКА • Начальство задержанного • <strong>До 2 USSS/FIB</strong> (если неприкос) ⚠️ • DB, CID</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title red">🛡️ НЕПРИКОСНОВЕННЫЕ ЛИЦА</div>
+    <div class="section-body">
+      <div class="card"><h4>Полный список (ст. 2 ч.1)</h4><p>• Губернатор, Вице • Главы департаментов и замы • Судьи • Руководители FIB/LSPD/LSCSD/SANG/EMS/<strong>USSS</strong>/WN и замы • Глава Коллегии адвокатов • Сенаторы и Спикер (на время Сената) • Адвокаты (на время суда)</p></div>
+      <div class="card"><h4>⚠️ Что НЕЛЬЗЯ</h4><p>❌ Привлечь к УК/АК/ДК/ЭК • ❌ Досматривать транспорт без согласия • ❌ Останавливать кортеж!</p></div>
+      <div class="card"><h4>✅ Когда МОЖНО</h4><p>Если угроза жизни/здоровью → задержать → доставить → уведомить → они решают.</p></div>
+      <div class="card"><h4>🎫 Ордера</h4><p><strong>AR</strong> рейд • <strong>AC</strong> оцепление • <strong>DT</strong> привод • <strong>AS</strong> арест+обыск • <strong>AI</strong> расследование • <strong>ML</strong> ВП • <strong>SE</strong> ЧП • <strong>SI</strong> приостановка • <strong>RI</strong> снятие</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title green">📢 МИРАНДА (ст. 17 ч.3 ПК)</div>
+    <div class="section-body">
+      <div class="card">
+        <div class="quote">«Вы имеете право хранить молчание. Всё, что вы скажете, может и будет использовано против Вас в суде. Вы имеете право на один телефонный звонок. Также Вы имеете право на адвоката. Если вам необходим адвокат, он будет для Вас запрошен. Вы понимаете свои права?»</div>
+        <p class="mark">⚠️ Удостовериться что понял. Молчание → вторично.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title red">💥 СТАДИИ ПРИМЕНЕНИЯ СИЛЫ (ст. 37 ПК)</div>
+    <div class="section-body">
+      <div class="card"><p>1. Присутствие • 2. Приказы • 3. Физ.сила • 4. Спецсредства • 5. Огнестрел</p><p class="mark">⚠️ Предупредительные выстрелы запрещены.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title green">🛡️ САМООБОРОНА (ст. 21 УК)</div>
+    <div class="section-body">
+      <div class="card"><p>Жизнь — важнейшее право. Граждане вправе защищать свою жизнь законно находящимся при них оружием. Запрещено обнажать оружие в общественных местах, кроме самообороны.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title blue">📄 КОГДА ЗАПРАШИВАТЬ ДОКИ</div>
+    <div class="section-body">
+      <div class="card"><p>1. На дороге — ст. 2 ДК • 2. На улице: в маске / нарушает УК-АК / боло-розыск</p><p><strong>БЕЗ ОСНОВАНИЙ — НЕЛЬЗЯ!</strong></p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title yellow">💰 ЗАЛОГ (ст. 5.10 УК + ст. 34 ПК)</div>
+    <div class="section-body">
+      <div class="card"><p>Минимум <strong>25.000</strong> + <strong>+25.000 за каждую ★</strong><br>⭐ 25.000 | ⭐⭐ 50.000 | ⭐⭐⭐ 75.000 | ⭐⭐⭐⭐ 100.000<br><br>Деяния с судимостью — залогу не подлежат.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title purple">🧠 ФОРМА ВИНЫ (ст. 2.2 УК)</div>
+    <div class="section-body">
+      <div class="card"><h4>Умысел</h4><p>Прямой — желало. Косвенный — не желало, но допускало.</p></div>
+      <div class="card"><h4>Неосторожность</h4><p>Легкомыслие — предвидело, но самонадеянно. Небрежность — не предвидело, но могло.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title blue">🔍 СЛЕДСТВЕННЫЕ ДЕЙСТВИЯ (ст. 51 ПК)</div>
+    <div class="section-body">
+      <div class="card"><p>а) Допрос • б) Осмотр • в) Обыск • г) Выемка • д) Очная ставка • е) Опознание • ё) Освидетельствование • ж) Проверка показаний • з) Экспертиза • и) Контроль переговоров • й) Следственный эксперимент • к) Возбуждение дела • л) ОРМ • м) Задержание</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title green">✅ ИСКЛЮЧАЮЩИЕ ПРЕСТУПНОСТЬ</div>
+    <div class="section-body">
+      <div class="card"><p>Ст. 4 — Необходимая оборона • Ст. 4.1 — Задержание • Ст. 4.2 — Крайняя необходимость • Ст. 4.3 — Обоснованный риск • Ст. 4.4 — Исполнение приказа • Ст. 4.5 — Принуждение</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title red">🔓 ОСВОБОЖДЕНИЕ (ст. 20 ч.1 ПК)</div>
+    <div class="section-body">
+      <div class="card"><p>а) не подтвердилось • б) не лишение свободы • в) с нарушением • г) 1 час прошёл • д) неприкос • е) нет доказательств</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title orange">🔒 ЗАДЕРЖАНИЕ (ст. 16 ч.1-2 ПК)</div>
+    <div class="section-body">
+      <div class="card"><p>а) застигнуто • б) явные следы • в) 3+ свидетелей • г) фото/видео • д) требование ГП • е) боло • ж) ориентировка</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title green">⚖️ СМЯГЧАЮЩИЕ (ст. 5.3 УК)</div>
+    <div class="section-body">
+      <div class="card"><p>а) принуждение • б) нарушение обороны • в) противоправность потерпевшего • г) явка • д) медпомощь • е) иные</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title blue">👨‍⚖️ ПРАВА АДВОКАТА</div>
+    <div class="section-body">
+      <div class="card"><p>• Причину задержания • Видеофиксацию • Собирать сведения • <strong>Конфиденциальная встреча ≤10 мин</strong> • КПЗ LSPD/LSCSD/FIB • Устный договор</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title purple">🏛️ ИЕРАРХИЯ НПА (ст. 74 Конституции)</div>
+    <div class="section-body">
+      <div class="card"><p>1) Конституция • 2) КЗ • 3) Кодексы и законы • 4) Постановления Сената • 5) Акты Губернатора/Вице • 6) Акты Глав департаментов • 7) Акты гос.органов • 8) Уставы</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title teal">📖 ТЕРМИНЫ</div>
+    <div class="section-body">
+      <div class="card"><h4>Виды наказаний</h4><p>а) Судебный штраф • б) Уголовный штраф • в) Лишение права занимать должности • г) Увольнение • д) Лишение свободы • е) Исправительные работы • ё) Принудительные работы</p></div>
+      <div class="card"><h4>Рецидив</h4><p>Умышленное преступление лицом с судимостью.</p></div>
+      <div class="card"><h4>Преступление</h4><p>Виновно совершённое общественно опасное деяние.</p></div>
+      <div class="card"><h4>Вина</h4><p>Психическое отношение лица к деянию.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title orange">👨‍⚖️ АДВОКАТСКИЕ ВОПРОСЫ (18 шт.)</div>
+    <div class="section-body">
+      <div class="qa"><div class="q">1. Вам известна ст. 16.13?</div><div class="a">Да/Нет (16.13 — Заведомо ложные показания)</div></div>
+      <div class="qa"><div class="q">2. Каким основанием руководствовались?</div><div class="a">Лицо застигнуто в момент правонарушения (ст. 16 ч.2 ПК)</div></div>
+      <div class="qa"><div class="q">3. Какие следственные действия применили?</div><div class="a">Допрос / Осмотр / Обыск / Выемка</div></div>
+      <div class="qa"><div class="q">4. Обстоятельства, исключающие преступность?</div><div class="a">Да/Нет (ст. 4, 4.1, 4.2, 4.3, 4.5 УК)</div></div>
+      <div class="qa"><div class="q">5. Вид состава преступления?</div><div class="a">Материальный / Формальный / Усечённый</div></div>
+      <div class="qa"><div class="q">6. Доказали субъективную сторону?</div><div class="a">Да/Нет</div></div>
+      <div class="qa"><div class="q">7. Стадии применения силы?</div><div class="a">Перечисляете</div></div>
+      <div class="qa"><div class="q">8. Форма вины?</div><div class="a">Умысел / Неосторожность</div></div>
+      <div class="qa"><div class="q">9. Кто объект, кто субъект?</div><div class="a">Субъект — кто совершил. Объект — против чего</div></div>
+      <div class="qa"><div class="q">10. Принципы ареста?</div><div class="a">Адекватность, безотлагательность</div></div>
+      <div class="qa"><div class="q">11. Как доказали вину?</div><div class="a">Совокупность допустимых доказательств</div></div>
+      <div class="qa"><div class="q">12. На какие НПА опирались?</div><div class="a">Процессуальный кодекс</div></div>
+      <div class="qa"><div class="q">13. Признаки опьянения?</div><div class="a">Да/Нет</div></div>
+      <div class="qa"><div class="q">14. Доп. действия?</div><div class="a">Да/Нет</div></div>
+      <div class="qa"><div class="q">15. Основание для внимания?</div><div class="a">Приметы в розыске / подозрительное поведение</div></div>
+      <div class="qa"><div class="q">16. Физическое сопротивление?</div><div class="a">Да/Нет</div></div>
+      <div class="qa"><div class="q">17. Что значит «Преступление»?</div><div class="a">Общественно опасное деяние</div></div>
+      <div class="alert yellow">⚠️ По 23 ПК обязаны только разъяснить причину задержания и показать фиксу.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title purple">🏛️ СУДЕБНЫЕ ИНСТАНЦИИ</div>
+    <div class="section-body">
+      <div class="card"><h4>Окружной</h4><p>Первая инстанция. Обжалование — Апелляционный.</p></div>
+      <div class="card"><h4>Апелляционный</h4><p>Апелляции. Срок 48 часов.</p></div>
+      <div class="card"><h4>Верховный</h4><p>Высшая инстанция. Дела о высокопоставленных.</p></div>
+      <div class="card"><h4>Федеральный</h4><p>Обжалование актов Верховного.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title blue">📋 КОМПЕТЕНЦИИ USSS</div>
+    <div class="section-body">
+      <div class="card"><h4>Что USSS ведёт</h4><p>✅ Федеральные • ✅ Финансовые • ✅ Гос.тайна • ✅ Должностные • ✅ Против власти/правосудия • ✅ Защита первых лиц</p></div>
+      <div class="card"><h4>Что НЕ ведёт</h4><p>❌ Региональные → LSPD/LSCSD • ❌ Информация от ФРБ — только через ГП</p></div>
+      <div class="card"><h4>Исключительные полномочия</h4><p>• Дистанция 20 м (5 м в помещениях) • Личный досмотр • Вход в жилые (уведомить ГП) • Информация от гос.органов (кроме ФРБ) • Спецоперации по первым лицам</p></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ВКЛАДКА 3: СТАТЬИ УК -->
+<div class="tab-content" id="ukarticles">
+
+  <div class="uk-filters">
+    <div class="filter-group">
+      <span class="filter-label">🎯 Фильтр по судимости:</span>
+      <button class="filter-btn active" data-filter="all">Все</button>
+      <button class="filter-btn" data-filter="yes">⚠️ С судимостью</button>
+      <button class="filter-btn" data-filter="no">✅ Без судимости</button>
+    </div>
+    <div class="filter-group">
+      <span class="filter-label">⏱️ Фильтр по сроку:</span>
+      <button class="filter-btn active" data-filter-srok="all">Все</button>
+      <button class="filter-btn" data-filter-srok="2">2 года</button>
+      <button class="filter-btn" data-filter-srok="3">3 года</button>
+      <button class="filter-btn" data-filter-srok="4">4 года</button>
+      <button class="filter-btn" data-filter-srok="5">5 лет</button>
+    </div>
+    <div class="filter-stats" id="filterStats"></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title red">⚠️ СУДИМОСТЬ — Когда ставится</div>
+    <div class="section-body">
+      <div class="card"><p><strong>Когда ставится:</strong></p><p>✅ ★★★★ и более<br>✅ Срок более 5 лет</p><span class="law">Ст. 5.8 ч.1 УК</span><p class="mark">⚠️ Запрет на госслужбу (ст. 1.9 ч.4 УК)</p><p>💰 Реабилитация: 125.000$</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title red">🔴 ПРОТИВ ЖИЗНИ И ЗДОРОВЬЯ</div>
+    <div class="section-body">
+      <div class="table-wrap">
+        <table>
+          <tr><th>Ст.</th><th>Название</th><th>Штраф</th><th>Срок</th><th>Суд.</th></tr>
+          <tr><td class="num">6.1 ч.1</td><td>Побои</td><td class="fine">15.000–90.000</td><td>3 года</td><td><span class="badge gray">Нет</span></td></tr>
+          <tr><td class="num">6.1 ч.2</td><td>Особо тяжкие телесные</td><td class="punish">—</td><td>4 года</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">6.1 ч.3</td><td>Тяжкие по неосторожности</td><td class="fine">20.000–40.000</td><td>3 года</td><td><span class="badge gray">Нет</span></td></tr>
+          <tr><td class="num">6.2 ч.1</td><td>Убийство</td><td class="punish">—</td><td>4 года</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">6.2 ч.2</td><td>Смерть по неосторожности</td><td class="punish">—</td><td>3 года</td><td><span class="badge gray">Нет</span></td></tr>
+          <tr><td class="num">6.3</td><td>Тяжкое убийство</td><td class="punish">—</td><td>5 лет</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">6.6</td><td>Угроза убийством</td><td class="fine">30.000–50.000</td><td>3 года</td><td><span class="badge gray">Нет</span></td></tr>
+          <tr><td class="num">6.7</td><td>Воспреп. мед.работнику</td><td class="fine">5.000–20.000</td><td>3 года</td><td><span class="badge gray">Нет</span></td></tr>
+          <tr><td class="num">7.1</td><td>Похищение человека</td><td class="punish">—</td><td>5 лет</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">7.1.1</td><td>Незаконное лишение свободы</td><td class="punish">—</td><td>4 года</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">7.2</td><td>Рабский труд</td><td class="punish">—</td><td>4 года</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">7.3</td><td>Купля-продажа человека</td><td class="punish">—</td><td>4 года</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">7.4 ч.1</td><td>Клевета</td><td class="fine">40.000–50.000</td><td>2–3 года</td><td><span class="badge gray">Нет</span></td></tr>
+          <tr><td class="num">8.1 ч.1</td><td>Изнасилование</td><td class="punish">—</td><td>4 года</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">8.2</td><td>Понуждение секс.характера</td><td class="punish">—</td><td>3 года</td><td><span class="badge gray">Нет</span></td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title purple">💼 ПРОТИВ СОБСТВЕННОСТИ</div>
+    <div class="section-body">
+      <div class="table-wrap">
+        <table>
+          <tr><th>Ст.</th><th>Название</th><th>Штраф</th><th>Срок</th><th>Суд.</th></tr>
+          <tr><td class="num">10.1 ч.1</td><td>Кража >15.000$</td><td class="fine">50.000–70.000</td><td>3 года</td><td><span class="badge gray">Нет</span></td></tr>
+          <tr><td class="num">10.1.1</td><td>Кража со взломом</td><td class="fine">70.000–100.000</td><td>4 года</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">10.2</td><td>Мошенничество</td><td class="punish">—</td><td>3 года</td><td><span class="badge gray">Нет</span></td></tr>
+          <tr><td class="num">10.2.1</td><td>Вымогательство</td><td class="punish">—</td><td>3 года</td><td><span class="badge gray">Нет</span></td></tr>
+          <tr><td class="num">10.3</td><td>Грабеж</td><td class="punish">—</td><td>3 года</td><td><span class="badge gray">Нет</span></td></tr>
+          <tr><td class="num">10.4</td><td>Разбой</td><td class="punish">—</td><td>4 года</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">10.5</td><td>Угон авто</td><td class="fine">30.000–60.000</td><td>3 года</td><td><span class="badge gray">Нет</span></td></tr>
+          <tr><td class="num">10.5.1</td><td>Угон гос.транспорта</td><td class="fine">50.000–70.000</td><td>4 года</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">10.6</td><td>Умышл. уничтожение имущества</td><td class="fine">30.000–60.000</td><td>3 года</td><td><span class="badge gray">Нет</span></td></tr>
+          <tr><td class="num">11.1</td><td>Без регистрации</td><td class="fine">20.000–30.000</td><td>3 года</td><td><span class="badge gray">Нет</span></td></tr>
+          <tr><td class="num">11.3</td><td>Уклонение от налогов</td><td class="fine">2x долга</td><td>5 лет</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">11.6</td><td>Фин.махинации</td><td class="punish">—</td><td>5 лет</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">11.7</td><td>Финансирование экстремизма</td><td class="punish">—</td><td>5 лет</td><td><span class="badge red">Да</span></td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title red">🚨 ПРОТИВ ОБЩЕСТВЕННОЙ БЕЗОПАСНОСТИ</div>
+    <div class="section-body">
+      <div class="table-wrap">
+        <table>
+          <tr><th>Ст.</th><th>Название</th><th>Штраф</th><th>Срок</th><th>Суд.</th></tr>
+          <tr><td class="num">12.1</td><td>Терроризм</td><td class="punish">—</td><td>5 лет</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">12.2</td><td>Несообщение о преступлении</td><td class="punish">—</td><td>3 года</td><td><span class="badge gray">Нет</span></td></tr>
+          <tr><td class="num">12.3</td><td>Ложное сообщение о теракте</td><td class="punish">—</td><td>4 года</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">12.4</td><td>Экстремизм</td><td class="punish">—</td><td>5 лет</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">12.6</td><td>Нарушение митинга</td><td class="punish">—</td><td>3 года</td><td><span class="badge gray">Нет</span></td></tr>
+          <tr><td class="num">12.6.1</td><td>Массовые беспорядки</td><td class="punish">—</td><td>5 лет</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">12.7 ч.1</td><td>Проникновение на охраняемый</td><td class="fine">20.000–50.000</td><td>3 года</td><td><span class="badge gray">Нет</span></td></tr>
+          <tr><td class="num">12.7 ч.2</td><td>На особо охраняемый</td><td class="fine">60.000–80.000</td><td>4–5 лет</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">12.7 ч.3</td><td>Должностным лицом</td><td class="fine">60.000–80.000</td><td>5 лет</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">12.8 ч.1</td><td>Оборот оружия</td><td class="fine">10.000–30.000</td><td>4 года</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">12.8 ч.2</td><td>Хранение оружия</td><td class="fine">10.000–30.000</td><td>4 года</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">12.8.1</td><td>Спец.средства гражданским</td><td class="fine">70.000–100.000</td><td>4 года</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">12.9</td><td>Взрывчатка</td><td class="punish">—</td><td>5 лет</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">12.10.1</td><td>Хищение гос.имущества</td><td class="punish">—</td><td>5 лет</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">12.11</td><td>Вооружённое формирование</td><td class="punish">—</td><td>5 лет</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">12.12</td><td>Преступное сообщество</td><td class="punish">—</td><td>5 лет</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">12.13</td><td>Получение гос.тайны</td><td class="punish">—</td><td>5 лет</td><td><span class="badge red">Да</span></td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title orange">💊 НАРКОТИКИ</div>
+    <div class="section-body">
+      <div class="table-wrap">
+        <table>
+          <tr><th>Ст.</th><th>Название</th><th>Штраф</th><th>Срок</th><th>Суд.</th></tr>
+          <tr><td class="num">13.1</td><td>Кустарное производство</td><td class="fine">20.000–40.000</td><td>3 года</td><td><span class="badge gray">Нет</span></td></tr>
+          <tr><td class="num">13.2</td><td>Наркотики 3+ г</td><td class="fine">40.000–60.000</td><td>4 года</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">13.2.1</td><td>Наркотики 25+ г</td><td class="punish">—</td><td>5 лет</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">13.3</td><td>Проституция</td><td class="fine">25.000–50.000</td><td>3 года</td><td><span class="badge gray">Нет</span></td></tr>
+          <tr><td class="num">13.4</td><td>Наркотики госниками</td><td class="punish">—</td><td>5 лет</td><td><span class="badge red">Да</span></td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title red">🏛️ ПРОТИВ ГОС. ВЛАСТИ</div>
+    <div class="section-body">
+      <div class="table-wrap">
+        <table>
+          <tr><th>Ст.</th><th>Название</th><th>Штраф</th><th>Срок</th><th>Суд.</th></tr>
+          <tr><td class="num">14.1</td><td>Дискредитация гос.органов</td><td class="punish">—</td><td>5 лет</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">14.2</td><td>Захват власти</td><td class="punish">—</td><td>5 лет</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">14.2.1</td><td>Сепаратизм</td><td class="punish">—</td><td>5 лет</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">14.3</td><td>Разглашение гос.тайны</td><td class="punish">—</td><td>4 года</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">14.3.1</td><td>Незаконное получение тайны</td><td class="punish">—</td><td>4 года</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">14.3.2</td><td>Утрата документов</td><td class="punish">—</td><td>4 года</td><td><span class="badge red">Да</span></td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title red">⚔️ ДОЛЖНОСТНЫЕ ⚠️ ВАЖНО для USSS</div>
+    <div class="section-body">
+      <div class="table-wrap">
+        <table>
+          <tr><th>Ст.</th><th>Название</th><th>Штраф</th><th>Срок</th><th>Суд.</th></tr>
+          <tr><td class="num">15.1 ч.1</td><td>Превышение полномочий</td><td class="fine">40.000–100.000</td><td>4 года</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">15.1 ч.2</td><td>Превышение с насилием</td><td class="punish">—</td><td>5 лет</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">15.1.1 ч.1</td><td>Злоупотребление</td><td class="fine">50.000–100.000</td><td>5 лет</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">15.1.1 ч.2</td><td>Вмешательство в задержание</td><td class="fine">40.000–90.000</td><td>5 лет</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">15.2</td><td>Неисполнение приказа</td><td class="fine">30.000–40.000</td><td>4 года</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">15.3 ч.1</td><td>Присвоение полномочий</td><td class="punish">—</td><td>4 года</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">15.3 ч.2</td><td>Присвоение внешних признаков</td><td class="fine">30.000–60.000</td><td>3 года</td><td><span class="badge gray">Нет</span></td></tr>
+          <tr><td class="num">15.4</td><td>Получение взятки</td><td class="punish">—</td><td>5 лет</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">15.5</td><td>Дача взятки</td><td class="punish">—</td><td>5 лет</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">15.6 ч.1</td><td>Халатность</td><td class="fine">40.000–70.000</td><td>4 года</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">15.6 ч.2</td><td>Халатность со смертью</td><td class="punish">—</td><td>5 лет</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">15.7</td><td>Деструктивное поведение</td><td class="fine">30.000–70.000</td><td>3 года</td><td><span class="badge gray">Нет</span></td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title purple">⚖️ ПРОТИВ ПРАВОСУДИЯ</div>
+    <div class="section-body">
+      <div class="table-wrap">
+        <table>
+          <tr><th>Ст.</th><th>Название</th><th>Штраф</th><th>Срок</th><th>Суд.</th></tr>
+          <tr><td class="num">16.1 ч.4</td><td>Неуважение к суду</td><td class="fine">15.000–70.000</td><td>4–5 лет</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">16.1 ч.5</td><td>Нарушение присяги</td><td class="fine">40.000–80.000</td><td>4–5 лет</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">16.2</td><td>Угроза судье/прокурору</td><td class="punish">—</td><td>5 лет</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">16.3</td><td>Привлечение невиновного</td><td class="punish">—</td><td>5 лет</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">16.4</td><td>Заведомо незаконное задержание</td><td class="punish">—</td><td>5 лет</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">16.8</td><td>Ложные показания</td><td class="punish">—</td><td>4 года</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">16.10 ч.1</td><td>Неисполнение ордера</td><td class="fine">30.000–70.000</td><td>4 года</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">16.10 ч.2</td><td>Госслужащим</td><td class="fine">40.000–80.000</td><td>5 лет</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">16.11</td><td>Сокрытие улик</td><td class="punish">—</td><td>4 года</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">16.13</td><td>Ложные показания прокурору</td><td class="fine">30.000–50.000</td><td>4 года</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">16.14</td><td>Отказ от показаний</td><td class="punish">—</td><td>3 года</td><td><span class="badge gray">Нет</span></td></tr>
+          <tr><td class="num">16.15</td><td>Уклонение от наказания</td><td class="punish">—</td><td>10–19 суток / 2–5 лет</td><td><span class="badge red">Да</span></td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title red">👮 ПРОТИВ УПРАВЛЕНИЯ ⚠️ ОСОБО ВАЖНО</div>
+    <div class="section-body">
+      <div class="table-wrap">
+        <table>
+          <tr><th>Ст.</th><th>Название</th><th>Штраф</th><th>Срок</th><th>Суд.</th></tr>
+          <tr><td class="num">17.1</td><td>Посягательство на жизнь силовика</td><td class="punish">—</td><td>5 лет</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">17.2</td><td>Насилие над силовиком</td><td class="fine">40.000–70.000</td><td>4 года</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">17.3</td><td>Оскорбление власти</td><td class="fine">20.000–50.000</td><td>3 года</td><td><span class="badge gray">Нет</span></td></tr>
+          <tr><td class="num">17.5</td><td>Самоуправство</td><td class="punish">—</td><td>3 года</td><td><span class="badge gray">Нет</span></td></tr>
+          <tr><td class="num">17.6</td><td>Неповиновение</td><td class="fine">10.000–50.000</td><td>3 года</td><td><span class="badge gray">Нет</span></td></tr>
+          <tr><td class="num">17.7 ч.1</td><td>Отказ от админ.штрафа</td><td class="fine">10.000–50.000</td><td>2 года</td><td><span class="badge gray">Нет</span></td></tr>
+          <tr><td class="num">17.7 ч.2</td><td>Отказ от угол.штрафа</td><td class="fine">20.000–60.000</td><td>3 года</td><td><span class="badge gray">Нет</span></td></tr>
+          <tr><td class="num">17.8</td><td>Подделка удостоверения</td><td class="punish">—</td><td>4 года</td><td><span class="badge red">Да</span></td></tr>
+          <tr><td class="num">17.9</td><td>Ложный вызов</td><td class="punish">—</td><td>4 года</td><td><span class="badge red">Да</span></td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ВКЛАДКА 4: АК / ДК -->
+<div class="tab-content" id="ak">
+  <div class="section">
+    <div class="section-title blue">🚗 ДОРОЖНЫЙ КОДЕКС</div>
+    <div class="section-body">
+      <div class="table-wrap">
+        <table>
+          <tr><th>Ст.</th><th>Описание</th><th>Наказание</th></tr>
+          <tr><td class="num">Ст. 1</td><td>Не предъявил права</td><td class="fine">до $5.000</td></tr>
+          <tr><td class="num">Ст. 2</td><td>Не остановился</td><td class="fine">до $5.000</td></tr>
+          <tr><td class="num">Ст. 3</td><td>Оплата — 15 секунд</td><td class="fine">15 сек</td></tr>
+          <tr><td class="num">Ст. 4</td><td>Скрылся с ДТП</td><td class="fine">до $10.000</td></tr>
+          <tr><td class="num">Ст. 5</td><td>ДТП с жертвами</td><td class="fine">до $20.000</td></tr>
+          <tr><td class="num">Ст. 6</td><td>Передал руль без прав</td><td class="fine">до $10.000</td></tr>
+          <tr><td class="num">Ст. 7</td><td>Влез в кортеж</td><td class="punish">до $20.000</td></tr>
+          <tr><td class="num">Ст. 8</td><td>Телефон за рулём</td><td class="fine">до $5.000</td></tr>
+          <tr><td class="num">Ст. 9</td><td>Безрассудное вождение</td><td class="fine">до $10.000</td></tr>
+          <tr><td class="num">Ст. 10</td><td>Без прав</td><td class="fine">до $10.000</td></tr>
+          <tr><td class="num">Ст. 13</td><td>Не уступил спец</td><td class="fine">до $7.000</td></tr>
+          <tr><td class="num">Ст. 14</td><td>Не пропустил EMS</td><td class="fine">до $10.000</td></tr>
+          <tr><td class="num">Ст. 16</td><td>Пешеход на проезжей</td><td class="fine">до $7.000</td></tr>
+          <tr><td class="num">Ст. 20</td><td>Помеха военной колонне</td><td class="punish">до $20.000 + лишение</td></tr>
+          <tr><td class="num">Ст. 26</td><td>Встречная полоса</td><td class="fine">до $15.000</td></tr>
+          <tr><td class="num">Ст. 29</td><td>Скорость</td><td class="fine">до $15.000</td></tr>
+          <tr><td class="num">Ст. 56</td><td>Без регистрации</td><td class="punish">до $20.000 + лишение</td></tr>
+          <tr><td class="num">Ст. 64</td><td>>10 штрафов</td><td class="punish">эвакуация</td></tr>
+          <tr><td class="num">Ст. 66</td><td>Неисправное ТС</td><td class="fine">до $4.000 + эвакуация</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title blue">📋 АДМИНИСТРАТИВНЫЙ КОДЕКС</div>
+    <div class="section-body">
+      <div class="table-wrap">
+        <table>
+          <tr><th>Ст.</th><th>Описание</th><th>Наказание</th></tr>
+          <tr><td class="num">5.1 ч.1</td><td>Мелкое хулиганство</td><td class="fine">$3.000–7.000 / арест</td></tr>
+          <tr><td class="num">5.2</td><td>Транспорт в гос.учреждении</td><td class="fine">$20.000</td></tr>
+          <tr><td class="num">5.3</td><td>Неприемлемый вид / опьянение</td><td class="fine">$5.000–20.000</td></tr>
+          <tr><td class="num">5.4 ч.1</td><td>Обнажение оружия гражданским</td><td class="fine">$15.000–20.000 + конф.</td></tr>
+          <tr><td class="num">5.4 ч.2</td><td>Обнажение оружия госслужащим</td><td class="fine">$5.000–15.000</td></tr>
+          <tr><td class="num">5.5</td><td>Холодное оружие в людном</td><td class="fine">$20.000</td></tr>
+          <tr><td class="num">5.6</td><td>Нарушение митинга</td><td class="fine">$20.000</td></tr>
+          <tr><td class="num">5.7</td><td>Безрассудное вождение</td><td class="fine">до $20.000 + лиш.</td></tr>
+          <tr><td class="num">5.8 ч.1</td><td>Ложный вызов</td><td class="fine">$10.000–20.000</td></tr>
+          <tr><td class="num">5.9</td><td>Неуважение к Сенату</td><td class="fine">$15.000–100.000</td></tr>
+          <tr><td class="num">5.10 ч.1</td><td>Воспреп. Сенату</td><td class="fine">$33.000–130.000</td></tr>
+          <tr><td class="num">6.1</td><td>Дискриминация</td><td class="fine">$10.000–20.000</td></tr>
+          <tr><td class="num">6.2</td><td>Курение</td><td class="fine">$5.000–20.000</td></tr>
+          <tr><td class="num">6.3 ч.1</td><td>Умышл. порча имущества</td><td class="fine">$15.000</td></tr>
+          <tr><td class="num">7.1</td><td>Браконьерство</td><td class="fine">$5.000–20.000</td></tr>
+          <tr><td class="num">8.1</td><td>Наркотики <3 г</td><td class="fine">$5.000–20.000</td></tr>
+          <tr><td class="num">9.1</td><td>Превышение (без последствий)</td><td class="fine">$10.000–20.000</td></tr>
+          <tr><td class="num">9.2</td><td>Злоупотребление</td><td class="fine">$10.000–20.000</td></tr>
+          <tr><td class="num">9.3</td><td>Халатность</td><td class="fine">$10.000–20.000</td></tr>
+          <tr><td class="num">9.5</td><td>Нарушение юрисдикции</td><td class="fine">$20.000</td></tr>
+          <tr><td class="num">11.1</td><td>Оскорбление</td><td class="fine">$5.000–20.000</td></tr>
+          <tr><td class="num">14.2</td><td>Нет мед.справки</td><td class="fine">$20.000</td></tr>
+        </table>
+      </div>
+      <div class="alert yellow" style="margin-top:14px">📌 <strong>Для штрафа по АК/ДК</strong> нужно увидеть документы!</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title orange">🔫 УГОНКИ</div>
+    <div class="section-body">
+      <div class="card"><h4>№1 — Проверка</h4><p>Нестандартный вид авто (редкая марка/цвет).</p></div>
+      <div class="card"><h4>№2 — Процедура остановки</h4><p>1. Два звуковых сигнала мегафоном<br>2. Разрешается стрельба по колёсам</p></div>
+      <div class="card"><h4>№3 — Если остановился</h4><p>1. Требование заглушить и выйти<br>2. Причина: «на ваше авто поступила ориентировка об угоне»<br>3. Фотофиксация + имитация проверки (15–30 сек)<br>4. Задержание по ст. 10.5 УК</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title purple">🪪 ЛИЦЕНЗИИ</div>
+    <div class="section-body">
+      <div class="card"><p><strong>Drive D</strong> — лёгкое авто • <strong>CDWL</strong> — оружие • <strong>Drive M</strong> — мотоцикл • <strong>CCDL-B</strong> — пикапы • <strong>CDL-A</strong> — тягачи • <strong>FH</strong> — рыбалка</p><p><strong>Стоимость:</strong> Гражданская 12.000$ + 3.000$ экзамен • Охотничья 4.000$ + 3.000$ • KNN 25.000$ (2 нед) • Коллекционер 75.000$ + 30.000$ • Парамедик 250.000$ + 50.000$</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ВКЛАДКА 5: ЭКЗ.БЛОК -->
+<div class="tab-content" id="exam">
+  <div class="section">
+    <div class="section-title red">🎓 НЕПРИКОСНОВЕННОСТЬ И ОРДЕРА</div>
+    <div class="section-body">
+      <div class="card"><h4>🚫 Высший статус</h4><p>Губернатор, Вице, Генпрокурор, Верховный Судья. ЗАПРЕЩЕНО обыскивать, досматривать транспорт, конвоировать.</p></div>
+      <div class="card"><h4>⚠️ Малая неприкосновенность</h4><p>Министры, замы, руководители ведомств (FIB, LSPD, LSCSD, SANG, EMS, USSS), Сенаторы, Адвокаты.</p></div>
+      <div class="card"><h4>✅ Исключение</h4><p>Если угроза жизни прямо на глазах → наручники → доставить → вызвать ГП/Судью.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title blue">⛓️ ПОРЯДОК ЗАДЕРЖАНИЯ</div>
+    <div class="section-body">
+      <div class="card"><h4>Часть 1</h4><p>Наручники → Удостоверение → Обыск → Основания → Миранда → КПЗ → Проверка → Права → Вторичный обыск → Розыск → Статьи → КПЗ</p></div>
+      <div class="card"><h4>Часть 2 (ордер)</h4><p>Наручники → Жетон → Обыск → Основания → Номер ордера → КПЗ → Идентификация → Уведомить</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title blue">🚔 КОНВОИРОВАНИЕ</div>
+    <div class="section-body">
+      <div class="card"><h4>Кортеж первых лиц</h4><p>Минимум 3 бронированные машины. Центральная — у заднего выхода Капитолия. Агенты сопровождают со всех сторон, садятся после СО.</p></div>
+      <div class="card"><h4>⚠️ Движение</h4><p><strong>Машина с СО НЕ ОСТАНАВЛИВАЕТСЯ!</strong> Последняя машина предотвращает, первая уезжает.</p></div>
+      <div class="card"><h4>Дистанция при общении</h4><p>Спиной к СО, лицом к толпе. <strong>Требование: 20 м от СО.</strong></p></div>
+      <div class="card"><h4>Пункт «е» ст. 4</h4><p>При сопровождении USSS (до 2) — доступ на любую закрытую территорию по приглашению СО.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title red">⚡ ЧС / ВП</div>
+    <div class="section-body">
+      <div class="card"><p><strong>Комендантский час:</strong> 23:00–06:00</p></div>
+      <div class="card"><p><strong>Разрешено:</strong> обыск, огнестрел после предупреждения.</p></div>
+      <div class="card"><p><strong>Руководство:</strong> ФРБ (ЧП и ВП)</p></div>
+      <div class="card"><p><strong>Место Правительства:</strong> Капитолий (ЧП), Форт Занкудо (ВП).</p></div>
+      <div class="card"><p><strong>Срок:</strong> не более 12 часов.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title orange">🔥 ТЕРРОРИЗМ</div>
+    <div class="section-body">
+      <div class="card"><p><strong>Руководитель КТО</strong> — Губернатор или иное лицо Правительства.</p></div>
+      <div class="card"><p><strong>Правовой режим</strong> — 13 мер.</p></div>
+      <div class="card"><p><strong>Лишение жизни террориста</strong> — правомерно (ст. 16).</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ВКЛАДКА 6: ИНСТРУКТОР -->
+<div class="tab-content" id="instr">
+  <div class="section">
+    <div class="section-title orange">👨‍🏫 ЧТО ЗНАЧИТ 12-Й РАНГ</div>
+    <div class="section-body">
+      <div class="card"><h4>1. Право карать</h4><p>Выдавать выговоры, отправлять на переаттестацию, отстранять.</p></div>
+      <div class="card"><h4>2. Отработка WARN</h4><p>300 баллов + 1 набор/1 экзамен. Срок — 72 часа.</p></div>
+      <div class="card"><h4>3. Свобода в дресс-коде</h4><p>Вправе НЕ носить форму. Костюм, деловой стиль.</p></div>
+      <div class="card"><h4>4. Экзаменатор</h4><p>Только Инструкторы записывают на мероприятия. Расставляешь, командуешь эвакуацией, отменяешь конвой.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title blue">📌 ЧЕК-ЛИСТ НАБОРА</div>
+    <div class="section-body">
+      <div class="alert blue">⚠️ ВСЁ под боди-камеру!</div>
+      <div class="card"><h4>1. Маска</h4><p>Снять. Отказ → ст. 16 ч.3 ПК.</p></div>
+      <div class="card"><h4>2. Паспорт</h4><p>Гражданство, 18+ (или 21+ по цензу).</p></div>
+      <div class="card"><h4>3. Мед.карта</h4><p>Действующая. Просрочена → ст. 17 ч.2 ТК.</p></div>
+      <div class="card"><h4>4. Лицензии</h4><p>Оружие + вождение.</p></div>
+      <div class="card"><h4>5. Проверка по базам</h4><p>Розыск → отказ (ст. 21 ч.1 ТК) • ЧС Мэрии/USSS → отказ • ЧС другой фракции → можно</p></div>
+      <div class="card"><h4>⏱️ Правило 1 часа</h4><p>Лог в <code>#отчётность</code> Discord.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title red">🔨 ДИСЦИПЛИНА</div>
+    <div class="section-body">
+      <div class="card"><h4>🟢 Устный</h4><p>Мусор, музыка, мат, выпрашивание рангов. <strong>48 часов</strong> (150 баллов + тест).</p></div>
+      <div class="card"><h4>🟡 Строгий</h4><p>Неявка в строй, сон на посту, прогул. <strong>72 часа</strong>. Старший — 300 + 1 набор/1 экзамен.</p></div>
+      <div class="card"><h4>🔴 Переаттестация</h4><p>2 строгих. <strong>48 часов и 3 попытки</strong>. Провал → увольнение + ЧС.</p></div>
+      <div class="card"><h4>⚠️ 3 взыскания = увольнение</h4></div>
+      <div class="card"><h4>⏱️ Хранение откатов</h4><p>Видео — <strong>48 часов</strong> (ст. 32 ч.5 ТК).</p></div>
+      <div class="card"><h4>📋 Отработка НВС</h4><p>500 бинтов + 25 аптечек + скрин</p></div>
+      <div class="card"><h4>📢 Сдача</h4><p>Канал: <code>⭕отработка-выговоров</code></p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title gold">📊 БАЛЛЫ</div>
+    <div class="section-body">
+      <div class="alert yellow">⚠️ Скрины с боди-камерой!</div>
+      <div class="table-wrap">
+        <table>
+          <tr><th>Действие</th><th>Баллы</th></tr>
+          <tr><td>Сопровождение</td><td class="num">40 (30 мин)</td></tr>
+          <tr><td>Суд</td><td class="num">80</td></tr>
+          <tr><td>Сенат</td><td class="num">80</td></tr>
+          <tr><td>Крафт</td><td class="num">100</td></tr>
+          <tr><td>Охрана МП/ГМП</td><td class="num">100</td></tr>
+          <tr><td>Патруль мэрии</td><td class="num">50 (1 час)</td></tr>
+          <tr><td>Расстановка камер</td><td class="num">25</td></tr>
+          <tr><td>Отбитие камер</td><td class="num">50</td></tr>
+          <tr><td>Задержание</td><td class="num">100</td></tr>
+          <tr><td>Ограбление</td><td class="num">80</td></tr>
+          <tr><td>Ордер</td><td class="num">150</td></tr>
+          <tr><td>Набор</td><td class="num">80</td></tr>
+          <tr><td>Экзамен</td><td class="num">50</td></tr>
+          <tr><td>Гос.волна</td><td class="num">100 (1 час)</td></tr>
+        </table>
+      </div>
+      <div class="alert blue" style="margin-top:14px">📢 Отчёт: <code>Одиночные баллы</code></div>
+      <div class="alert yellow">⬆️ Не более 1 ранга в сутки!</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title teal">📈 ПОВЫШЕНИЕ</div>
+    <div class="section-body">
+      <div class="table-wrap">
+        <table>
+          <tr><th>Ранг</th><th>Что нужно</th></tr>
+          <tr><td><strong>1→4</strong></td><td>Опрос + собеседование</td></tr>
+          <tr><td><strong>4→5</strong></td><td>Тест + <strong>300 баллов</strong></td></tr>
+          <tr><td><strong>5→7</strong></td><td>Тест USSS + <strong>600 баллов</strong></td></tr>
+          <tr><td><strong>7→9</strong></td><td>Устный + <strong>1000 баллов</strong></td></tr>
+          <tr><td><strong>На 12</strong></td><td>Обзвон + руководство</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title pink">🚁 ВОЗДУШНЫЙ ПАТРУЛЬ</div>
+    <div class="section-body">
+      <div class="alert red">🔒 <strong>ЗАПРЕЩЕНО:</strong> «поставка», «конвой», «груз», «колонна», «количество машин»!</div>
+      <div class="alert green">✅ <strong>Можно:</strong> кодовые слова, цвет авто, количество людей, направление.</div>
+      <div class="card"><h4>Коды</h4><p><strong>«Феррари»</strong> скопление авто • <strong>«Небула»</strong> борт • <strong>«Трасса-5»</strong> маршрут • <strong>«Заправка»</strong> ориентир • <strong>«Свободно»</strong> чисто • <strong>«Пробка»</strong> помеха • <strong>«Гости»</strong> подозрительные • <strong>«Код-0»</strong> нападение</p></div>
+      <div class="card"><h4>🟢 Чисто</h4><div class="quote">«Небула-1: Феррари свободно, трасса-5 чистая».</div></div>
+      <div class="card"><h4>🟡 Угроза</h4><div class="quote">«Внимание! Феррари на заправке, цвет чёрный, до 4 гостей. Возможна пробка».</div></div>
+      <div class="card"><h4>🔴 Код-0</h4><div class="quote">«Код-0! Феррари жёстко на трассе-5! Зажимают центральную! Всем силовым — занять район!»</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title orange">🎓 ОРУЖИЕ</div>
+    <div class="section-body">
+      <div class="card"><p>При защите Первых Лиц — <strong>разрешено применять без предупреждения.</strong></p></div>
+      <div class="card"><p>Порядок: голос → в воздух → на поражение.</p></div>
+      <div class="card"><p>После: доклад → EMS → боди-камера → рапорт за 24 часа.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ВКЛАДКА 7: ЗОТ -->
+<div class="tab-content" id="zot">
+  <div class="section">
+    <div class="section-title blue">🗺️ ЗОТ</div>
+    <div class="section-body">
+      <div class="card"><h4>⬜ Белый — прилегающие + холл</h4><p>Все могут. Требуй цель. «Просто так» → покинуть.</p></div>
+      <div class="card"><h4>🟨 Жёлтый — охраняемые</h4><p>Сотрудники, Губернатор, Вице, ГП, ЗГП, IB, адвокаты, спецпропуск.</p></div>
+      <div class="card"><h4>🟥 Красный — особо охраняемые</h4><p>Форт Занкудо, Офис FIB, Авианосец, Кайо-Перико.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title green">📋 ЦЕЛИ ВИЗИТА</div>
+    <div class="section-body">
+      <div class="table-wrap">
+        <table>
+          <tr><th>Организация</th><th>Цели</th></tr>
+          <tr><td><strong>LSPD / LSCSD</strong></td><td>Лицензии CDWL, трудоустройство, заявление, явка, сдача нелегала</td></tr>
+          <tr><td><strong>FIB</strong></td><td>Сдача нелегала, трудоустройство</td></tr>
+          <tr><td><strong>Government</strong></td><td>Секретарь, снятие судимости, лицензии, юр.помощь, голосование</td></tr>
+          <tr><td><strong>EMS</strong></td><td>Мед.помощь, документы, трудоустройство</td></tr>
+          <tr><td><strong>SANG</strong></td><td>Трудоустройство, КМБ</td></tr>
+          <tr><td><strong>WN</strong></td><td>Услуги СМИ, трудоустройство</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title purple">📅 РАСПИСАНИЕ</div>
+    <div class="section-body">
+      <div class="table-wrap">
+        <table>
+          <tr><th>Время</th><th>Мероприятие</th><th>Грайф</th></tr>
+          <tr><td class="num">00:00</td><td>🚁 AIRDROP</td><td class="num">22:45</td></tr>
+          <tr><td class="num">04:00</td><td>🚁 AIRDROP</td><td class="num">03:45</td></tr>
+          <tr><td class="num">08:00</td><td>🚁 AIRDROP</td><td class="num">07:45</td></tr>
+          <tr><td class="num">10:00</td><td>📦 ТАЙНИКИ</td><td class="num">09:30</td></tr>
+          <tr><td class="num">10:45</td><td>🤝 ВЕРБОВКА АИЛ</td><td class="num">10:45</td></tr>
+          <tr><td class="num">12:00</td><td>🚁 AIRDROP</td><td class="num">11:45</td></tr>
+          <tr><td class="num">14:00</td><td>📦 ТАЙНИКИ</td><td class="num">13:30</td></tr>
+          <tr><td class="num">14:45</td><td>🏭 ЗАХВАТ ЦЕХОВ</td><td class="num">14:45</td></tr>
+          <tr><td class="num">16:00</td><td>🏝️ ОСТРОВ / ФЗ</td><td class="num">15:30</td></tr>
+          <tr><td class="num">18:00</td><td>📦 ТАЙНИКИ</td><td class="num">17:30</td></tr>
+          <tr><td class="num">18:45</td><td>🤝 ВЕРБОВКА АИЛ</td><td class="num">18:45</td></tr>
+          <tr><td class="num">20:00</td><td>🚁 AIRDROP</td><td class="num">19:45</td></tr>
+          <tr><td class="num">22:00</td><td>📦 ТАЙНИКИ</td><td class="num">21:30</td></tr>
+          <tr><td class="num">22:45</td><td>🏭 ЗАХВАТ ЦЕХОВ</td><td class="num">22:45</td></tr>
+          <tr><td class="num">24/7</td><td>📦 ПОСТАВКИ</td><td>—</td></tr>
+          <tr><td class="num">14:00–21:00</td><td>🏴 КАПТЫ</td><td>—</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ВКЛАДКА 8: КОДЕКСЫ -->
+<div class="tab-content" id="links">
+  <div class="section">
+    <div class="section-title blue">📚 КОДЕКСЫ И ССЫЛКИ (Orlando)</div>
+    <div class="section-body">
+      <div class="links-grid">
+        <a class="link-card" href="https://forum.majestic-rp.ru/threads/konstitutsiya-shtata-san-andreas.3519602/" target="_blank"><span class="ic">📕</span><div class="ttl">Конституция</div><div class="dsc">Основной закон</div></a>
+        <a class="link-card" href="https://forum.majestic-rp.ru/threads/ugolovnyi-kodeks-shtata-san-andreas.3232577/" target="_blank"><span class="ic">🔪</span><div class="ttl">Уголовный кодекс</div><div class="dsc">УК San-Andreas</div></a>
+        <a class="link-card" href="https://forum.majestic-rp.ru/threads/protsessual-nyi-kodeks-shtata-san-andreas.3232571/" target="_blank"><span class="ic">⚖️</span><div class="ttl">Процессуальный кодекс</div><div class="dsc">ПК</div></a>
+        <a class="link-card" href="https://forum.majestic-rp.ru/threads/administrativnyi-kodeks-shtata-san-andreas.3232568/" target="_blank"><span class="ic">📋</span><div class="ttl">Административный кодекс</div><div class="dsc">АК</div></a>
+        <a class="link-card" href="https://forum.majestic-rp.ru/threads/dorozhnyi-kodeks-shtata-san-andreas.3232575/" target="_blank"><span class="ic">🚗</span><div class="ttl">Дорожный кодекс</div><div class="dsc">ДК</div></a>
+        <a class="link-card" href="https://forum.majestic-rp.ru/threads/trudovoi-kodeks-shtata-san-andreas.3232573/" target="_blank"><span class="ic">👷</span><div class="ttl">Трудовой кодекс</div><div class="dsc">ТК</div></a>
+        <a class="link-card" href="https://forum.majestic-rp.ru/threads/grazhdanskii-kodeks-shtata-san-andreas.3232579/" target="_blank"><span class="ic">📜</span><div class="ttl">Гражданский кодекс</div><div class="dsc">ГК</div></a>
+        <a class="link-card" href="https://forum.majestic-rp.ru/threads/eticheskii-kodeks-shtata-san-andreas.3232576/" target="_blank"><span class="ic">🎩</span><div class="ttl">Этический кодекс</div><div class="dsc">ЭК</div></a>
+        <a class="link-card" href="https://forum.majestic-rp.ru/threads/konstitutsionnyi-zakon-o-pravitel-stve-shtata-san-andreas.3229301/" target="_blank"><span class="ic">🏛️</span><div class="ttl">КЗ о Правительстве</div><div class="dsc">Структура власти</div></a>
+        <a class="link-card" href="https://forum.majestic-rp.ru/threads/konstitutsionnyi-zakon-o-senate-shtata-san-andreas.3229295/" target="_blank"><span class="ic">🏛️</span><div class="ttl">КЗ о Сенате</div><div class="dsc">Законодательная</div></a>
+        <a class="link-card" href="https://forum.majestic-rp.ru/threads/zakon-o-deyatel-nosti-sekretnoi-sluzhby-v-shtate-san-andreas.3232673/" target="_blank"><span class="ic">🕵️</span><div class="ttl">Закон о USSS</div><div class="dsc">Секретная Служба</div></a>
+        <a class="link-card" href="https://forum.majestic-rp.ru/threads/zakon-o-sisteme-orderov-shtata-san-andreas.3441676/" target="_blank"><span class="ic">⚖️</span><div class="ttl">Система ордеров</div><div class="dsc">Ордера</div></a>
+        <a class="link-card" href="https://forum.majestic-rp.ru/threads/prilozheniye-no1-k-ugolovnomu-kodeksu-shtata-san-andreas-o-zakrytykh-okhranyayemykh-i-osobo-okhranyayemykh-territoriyakh.3232601/" target="_blank"><span class="ic">🗺️</span><div class="ttl">Приложение №1 к УК</div><div class="dsc">Территории</div></a>
+        <a class="link-card" href="https://forum.majestic-rp.ru/threads/zakon-o-regulirovanii-oborota-oruzhiya-boyepripasov-i-spetssredstv-v-shtate-san-andreas.3232653/" target="_blank"><span class="ic">🔫</span><div class="ttl">Оборот оружия</div><div class="dsc">Оружие</div></a>
+        <a class="link-card" href="https://forum.majestic-rp.ru/threads/zakon-ob-obespechenii-neprikosnovennosti-gosudarstvennykh-sluzhashchikh-shtata-san-andreas.3232640/" target="_blank"><span class="ic">🛡️</span><div class="ttl">Неприкосновенность</div><div class="dsc">Госслужащие</div></a>
+        <a class="link-card" href="https://forum.majestic-rp.ru/threads/zakon-o-gosudarstvennoi-taine-v-shtate-san-andreas.3232663/" target="_blank"><span class="ic">🤫</span><div class="ttl">Гос.тайна</div><div class="dsc">Тайна</div></a>
+        <a class="link-card" href="https://forum.majestic-rp.ru/threads/zakon-ob-operativno-rozysknoi-deyatel-nosti.3232649/" target="_blank"><span class="ic">🔎</span><div class="ttl">ОРД</div><div class="dsc">Оперативно-розыскная</div></a>
+        <a class="link-card" href="https://forum.majestic-rp.ru/threads/zakon-o-sredstvakh-massovoi-informatsii.3232679/" target="_blank"><span class="ic">📺</span><div class="ttl">Закон о СМИ</div><div class="dsc">СМИ</div></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<footer>🛡️ USSS Orlando — Памятка сотрудника · Все важное — под рукой</footer>
+
+<aside class="quick-nav">
+  <div class="quick-nav-title">📌 Быстрые ссылки</div>
+  <button class="quick-nav-btn" data-goto="levels">🟢🟡🔴 Уровни</button>
+  <button class="quick-nav-btn" data-goto="uk">⚖️ УК / ПК</button>
+  <button class="quick-nav-btn" data-goto="ukarticles">📕 Статьи УК</button>
+  <button class="quick-nav-btn" data-goto="ak">🚗 АК / ДК</button>
+  <button class="quick-nav-btn" data-goto="exam">🎓 ЭКЗ.БЛОК</button>
+  <button class="quick-nav-btn" data-goto="instr">👨‍🏫 Инструктор</button>
+  <button class="quick-nav-btn" data-goto="zot">🗺️ ЗОТ + Расписание</button>
+  <button class="quick-nav-btn" data-goto="links">📚 Кодексы</button>
+</aside>
+
+<button id="topBtn" title="Наверх">↑</button>
+
+<script>
+(function(){
+  "use strict";
+
+  var SYNONYMS = {
+    "наручники":["cuff","наручник"],"cuff":["наручники"],
+    "задержание":["арест","задержать"],"арест":["задержание"],
+    "документы":["доки","паспорт"],"доки":["документы","паспорт"],
+    "миранда":["права","зачитать"],"маска":["снять маску"],
+    "оружие":["ствол","пистолет"],"штраф":["наказание"],
+    "залог":["выкуп"],"прокурор":["огп","гп"],
+    "адвокат":["защитник","юрист"],"судья":["суд"],
+    "губернатор":["губер","губ"],"кортеж":["конвой","колонна"],
+    "поставка":["груз","феррари"],"обыск":["досмотр","шмон"],
+    "выговор":["взыскание","warn"],"баллы":["очки"],
+    "ранг":["звание","повышение"],"судимость":["судимый"]
+  };
+
+  function normalize(t){
+    if(!t) return "";
+    t = t.toLowerCase().replace(/ё/g,"е");
+    t = t.replace(/[^\wа-я0-9\s\.\-]/gi," ").replace(/\s+/g," ").trim();
+    return t;
+  }
+
+  function getRoot(w){
+    w = normalize(w);
+    if(w.length < 4) return w;
+    var e = ["иями","ями","ами","ией","ях","ам","ой","ей","ый","ий","ые","ая","ое","их","ых","ого","его","ому","ему","ыми","ими","ть","ся","ться","ешь","ет","ем","ут","ют","ит","ат","ят","ал","ла","ло","ли","ение","ание","ости","ность"];
+    for(var i=0;i<e.length;i++){
+      if(w.length > e[i].length+2 && w.slice(-e[i].length) === e[i]) return w.slice(0,w.length-e[i].length);
+    }
+    return w;
+  }
+
+  // ЧАСЫ
+  var clockEl = document.getElementById("clock");
+  if(clockEl){
+    function updateClock(){
+      var n = new Date();
+      var pad = function(x){ return String(x).padStart(2,"0"); };
+      clockEl.textContent = pad(n.getDate())+"."+pad(n.getMonth()+1)+"."+n.getFullYear()+" "+pad(n.getHours())+":"+pad(n.getMinutes())+":"+pad(n.getSeconds());
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
+  }
+
+  // ПЕЧАТЬ
+  var printBtn = document.getElementById("printBtn");
+  if(printBtn){
+    printBtn.addEventListener("click", function(){
+      var active = document.querySelector(".tab-content.active");
+      if(!active) return;
+      var title = "USSS Orlando";
+      var ab = document.querySelector(".tab-btn.active");
+      if(ab) title += " — " + ab.textContent.replace(/\s+/g," ").trim();
+      var w = window.open("","_blank");
+      w.document.write("<!DOCTYPE html><html><head><meta charset='UTF-8'><title>"+title+"</title><style>");
+      w.document.write("body{font-family:'Segoe UI',Tahoma,sans-serif;padding:20px;color:#000;background:#fff;line-height:1.6}");
+      w.document.write("h1{border-bottom:2px solid #333;padding-bottom:8px;margin-bottom:16px;font-size:1.3rem}");
+      w.document.write(".section{border:1px solid #ccc;border-radius:6px;margin-bottom:14px;page-break-inside:avoid}");
+      w.document.write(".section-title{background:#eee;padding:10px 14px;font-weight:700;border-bottom:1px solid #ccc}");
+      w.document.write(".card{padding:10px 14px;border-bottom:1px solid #ddd}");
+      w.document.write(".card h4{font-size:.95rem;margin-bottom:5px}");
+      w.document.write(".card p{font-size:.88rem;margin:4px 0;padding-left:12px}");
+      w.document.write(".quote{background:#f5f5f5;border-left:3px solid #666;padding:8px 12px;margin:8px 0 6px 12px;font-style:italic}");
+      w.document.write(".law{display:inline-block;background:#fffbe0;color:#665500;padding:2px 8px;font-size:.72rem;margin:4px 0 4px 12px;font-family:monospace}");
+      w.document.write(".alert{padding:8px 12px;margin:8px 10px;background:#f0f0f0;border-left:4px solid #333}");
+      w.document.write("table{width:100%;border-collapse:collapse;font-size:.82rem}");
+      w.document.write("th{background:#ddd;padding:8px;text-align:left;border:1px solid #999}");
+      w.document.write("td{padding:7px 8px;border:1px solid #ccc}");
+      w.document.write(".badge{display:inline-block;padding:1px 6px;background:#eee;border:1px solid #999;font-size:.7rem}");
+      w.document.write(".qa{margin:6px 12px;border-left:3px solid #666;background:#f5f5f5;padding:8px 12px}");
+      w.document.write("</style></head><body><h1>🛡️ "+title+"</h1>");
+      w.document.write(active.innerHTML);
+      w.document.write("</body></html>");
+      w.document.close();
+      setTimeout(function(){ w.print(); }, 500);
+    });
+  }
+
+  // СЧЁТЧИК СТАТЕЙ
+  var ukCount = document.getElementById("ukCount");
+  if(ukCount){
+    var ukTab = document.getElementById("ukarticles");
+    if(ukTab){
+      var count = 0;
+      ukTab.querySelectorAll("table tr").forEach(function(r){
+        if(r.querySelector("td.num")) count++;
+      });
+      ukCount.textContent = count;
+    }
+  }
+
+  // ФИЛЬТРЫ
+  var fSudi = "all", fSrok = "all";
+
+  function applyFilters(){
+    var tab = document.getElementById("ukarticles");
+    if(!tab) return;
+    var vis = 0, hid = 0;
+    tab.querySelectorAll(".section").forEach(function(sec){
+      var title = sec.querySelector(".section-title");
+      if(title && title.textContent.indexOf("СУДИМОСТЬ — Когда") !== -1) return;
+      var v = 0;
+      sec.querySelectorAll("table tr").forEach(function(tr){
+        if(tr.querySelector("th")) return;
+        var badge = tr.querySelector(".badge");
+        var srokCell = tr.children[3];
+        var srokTxt = srokCell ? srokCell.textContent : "";
+        var mSudi = (fSudi === "all") || (fSudi === "yes" && badge && badge.classList.contains("red")) || (fSudi === "no" && badge && badge.classList.contains("gray"));
+        var mSrok = (fSrok === "all") || (srokTxt.indexOf(fSrok) !== -1);
+        if(mSudi && mSrok){ tr.style.display=""; v++; vis++; } else { tr.style.display="none"; hid++; }
+      });
+      sec.style.display = v > 0 ? "" : "none";
+    });
+    var st = document.getElementById("filterStats");
+    if(st) st.innerHTML = "📊 Найдено: <strong>"+vis+"</strong> · Скрыто: "+hid;
+  }
+
+  document.querySelectorAll(".filter-btn").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var t = btn.getAttribute("data-filter");
+      var s = btn.getAttribute("data-filter-srok");
+      if(t){
+        document.querySelectorAll('[data-filter]').forEach(function(b){ b.classList.remove("active"); });
+        btn.classList.add("active"); fSudi = t;
+      } else if(s){
+        document.querySelectorAll('[data-filter-srok]').forEach(function(b){ b.classList.remove("active"); });
+        btn.classList.add("active"); fSrok = s;
+      }
+      applyFilters();
+    });
+  });
+  setTimeout(applyFilters, 100);
+
+  // ПЕРЕКЛЮЧЕНИЕ ВКЛАДОК
+  var buttons = document.querySelectorAll(".tab-btn");
+  var contents = document.querySelectorAll(".tab-content");
+  buttons.forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var t = btn.getAttribute("data-tab");
+      buttons.forEach(function(b){ b.classList.remove("active"); });
+      btn.classList.add("active");
+      contents.forEach(function(c){
+        c.classList.remove("active");
+        if(c.id === t) c.classList.add("active");
+      });
+      window.scrollTo({top:0,behavior:"smooth"});
+    });
+  });
+
+  // БЫСТРЫЕ ССЫЛКИ
+  document.querySelectorAll(".quick-nav-btn").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var g = btn.getAttribute("data-goto");
+      var tabBtn = document.querySelector('.tab-btn[data-tab="'+g+'"]');
+      if(tabBtn){
+        tabBtn.click();
+        document.querySelectorAll(".quick-nav-btn").forEach(function(b){ b.classList.remove("active"); });
+        btn.classList.add("active");
+      }
+    });
+  });
+
+  // УМНЫЙ ПОИСК
+  var searchInput = document.getElementById("search");
+  var searchCount = document.getElementById("searchCount");
+
+  if(searchInput){
+    searchInput.addEventListener("input", function(){
+      var q = normalize(searchInput.value);
+      var countEl = searchCount;
+
+      document.querySelectorAll("mark.hl").forEach(function(m){
+        var p = m.parentNode;
+        p.replaceChild(document.createTextNode(m.textContent), m);
+        p.normalize();
+      });
+      document.querySelectorAll(".card,.qa,table tr,.section,.link-card").forEach(function(el){ el.style.display=""; });
+
+      if(!q){
+        countEl.classList.remove("show");
+        countEl.textContent = "0";
+        return;
+      }
+
+      var qw = q.split(" ").filter(function(w){ return w.length>1; });
+      var activeTab = document.querySelector(".tab-content.active");
+      var total = 0;
+
+      contents.forEach(function(tab){
+        var tm = 0;
+        tab.querySelectorAll(".card,.qa,.link-card").forEach(function(item){
+          var txt = normalize(item.textContent);
+          var ok = qw.every(function(w){
+            if(txt.indexOf(w) !== -1) return true;
+            return txt.indexOf(getRoot(w)) !== -1;
+          });
+          if(ok){ item.style.display=""; tm++; if(tab===activeTab) highlightText(item, qw[0]); }
+          else { item.style.display="none"; }
+        });
+        tab.querySelectorAll("table tr").forEach(function(tr){
+          var txt = normalize(tr.textContent);
+          var ok = qw.every(function(w){
+            if(txt.indexOf(w) !== -1) return true;
+            return txt.indexOf(getRoot(w)) !== -1;
+          });
+          tr.style.display = ok ? "" : "none";
+          if(ok) tm++;
+        });
+        tab.querySelectorAll(".section").forEach(function(sec){
+          var v = 0;
+          sec.querySelectorAll(".card,.qa,.link-card").forEach(function(c){ if(c.style.display!=="none") v++; });
+          var vr = 0;
+          sec.querySelectorAll("table tr").forEach(function(r){ if(r.style.display!=="none") vr++; });
+          sec.style.display = (v>0 || vr>0) ? "" : "none";
+        });
+        total += tm;
+      });
+
+      if(countEl){ countEl.textContent = total; countEl.classList.add("show"); }
+    });
+  }
+
+  function highlightText(node, q){
+    if(!q || !node) return;
+    if(node.nodeType === 3){
+      var t = node.nodeValue;
+      var nt = normalize(t);
+      var i = nt.indexOf(q);
+      if(i === -1) return;
+      var b = t.slice(0,i), f = t.slice(i,i+q.length), a = t.slice(i+q.length);
+      var sp = document.createElement("span");
+      sp.innerHTML = escapeHtml(b) + '<mark class="hl">' + escapeHtml(f) + '</mark>' + escapeHtml(a);
+      node.parentNode.replaceChild(sp, node);
+    } else if(node.nodeType === 1 && node.tagName !== "SCRIPT" && node.tagName !== "STYLE" && !node.classList.contains("hl")){
+      var ch = Array.prototype.slice.call(node.childNodes);
+      ch.forEach(function(c){ highlightText(c, q); });
+    }
+  }
+
+  function escapeHtml(s){
+    return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  }
+
+  // КНОПКА НАВЕРХ
+  var topBtn = document.getElementById("topBtn");
+  if(topBtn){
+    window.addEventListener("scroll", function(){
+      if(window.pageYOffset > 400) topBtn.classList.add("show");
+      else topBtn.classList.remove("show");
+    });
+    topBtn.addEventListener("click", function(){
+      window.scrollTo({top:0,behavior:"smooth"});
+    });
+  }
+
+})();
+</script>
+
+</body>
+</html>
