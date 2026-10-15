@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ЗОТ + Расписание | Majestic USSS Orlando ⭐</title>
+<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <button class="menu-toggle" id="menuToggle">☰</button>
+  <a href="index.html" class="header-logo">
+    <img src="images/logo.png" alt="USSS">
+    <span class="header-logo-text">Majestic USSS Orlando | Памятка ⭐</span>
+  </a>
+  <div class="header-search">
+    <input type="text" id="search" placeholder="🔍 Поиск: зона, цели, расписание...">
+    <span class="search-count" id="searchCount">0</span>
+  </div>
+  <div class="header-right">
+    <div class="clock" id="clock">--.--.---- --:--:--</div>
+    <button class="header-btn" id="printBtn" title="Печать">🖨️</button>
+  </div>
+</header>
+
+<aside class="sidebar">
+  <div class="sidebar-section">
+    <div class="sidebar-title">Основное</div>
+    <a href="index.html" class="sidebar-link"><span class="icon">🏠</span> Главная</a>
+    <a href="levels.html" class="sidebar-link"><span class="icon">🟢</span> Уровни</a>
+    <a href="usss.html" class="sidebar-link"><span class="icon">🛡️</span> USSS</a>
+    <a href="zot.html" class="sidebar-link"><span class="icon">🗺️</span> ЗОТ + Расписание</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-title">Кодексы</div>
+    <a href="uk.html" class="sidebar-link"><span class="icon">📕</span> УК</a>
+    <a href="pk.html" class="sidebar-link"><span class="icon">⚖️</span> ПК</a>
+    <a href="ak-dk.html" class="sidebar-link"><span class="icon">🚗</span> АК / ДК</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-title">🔥 Душим</div>
+    <a href="advocates.html" class="sidebar-link"><span class="icon">👨‍⚖️</span> Адвокатов</a>
+    <a href="prosecutors.html" class="sidebar-link"><span class="icon">🏛️</span> Прокуроров</a>
+    <a href="officials.html" class="sidebar-link"><span class="icon">👮</span> Госников</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-title">Служба</div>
+    <a href="exam.html" class="sidebar-link"><span class="icon">🎓</span> Экзамен-блок</a>
+    <a href="points.html" class="sidebar-link"><span class="icon">📊</span> Баллы / WARN</a>
+    <a href="radio.html" class="sidebar-link"><span class="icon">📻</span> Рации</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-title">Справочники</div>
+    <a href="codes.html" class="sidebar-link"><span class="icon">📚</span> Все кодексы</a>
+  </div>
+</aside>
+
+<main class="main">
+
+  <h1 class="page-title">🗺️ ЗОТ + Расписание</h1>
+  <p class="page-subtitle">Зоны охраняемых территорий, цели визита, расписание мероприятий.</p>
+
+  <!-- ЗОТ -->
+  <div class="section">
+    <div class="section-title blue">🗺️ ЗОТ (зоны охраняемых территорий)</div>
+    <div class="section-body">
+
+      <div class="card">
+        <h4>⬜ Белый — прилегающие территории + холл</h4>
+        <p>Доступ всем гражданам. Требуй цель визита.</p>
+        <p>«Просто так» → покинуть.</p>
+        <p>При нарушении законодательства на прилегающей территории — по требованию уполномоченного сотрудника лицо <strong>обязано покинуть</strong> её.</p>
+        <span class="law">Прил. №1 к УК, ст. 6 — визуализация</span>
+      </div>
+
+      <div class="card">
+        <h4>🟨 Жёлтый — охраняемые объекты</h4>
+        <p>Доступ: сотрудники, Губернатор, Вице, ГП, ЗГП, IB, адвокаты, спецпропуск.</p>
+        <p>Объекты: Капитолий (кроме холла), участки LSPD/LSCSD, мед. учреждения, WN.</p>
+        <span class="law">Прил. №1 к УК, ст. 2</span>
+      </div>
+
+      <div class="card">
+        <h4>🟥 Красный — особо охраняемые объекты</h4>
+        <p>Форт Занкудо.</p>
+        <p>Офис FIB.</p>
+        <p>Авианосец + воды в радиусе 1 мили.</p>
+        <p>Кайо-Перико + прибрежные воды 1 миля (кроме аэропорта).</p>
+        <span class="law">Прил. №1 к УК, ст. 3</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ЦЕЛИ ВИЗИТА -->
+  <div class="section">
+    <div class="section-title green">📋 Цели визита (список открытый)</div>
+    <div class="section-body">
+      <div class="table-wrap">
+        <table>
+          <tr><th>Организация</th><th>Цели</th></tr>
+          <tr><td><strong>LSPD / LSCSD</strong></td><td>Лицензии CDWL, трудоустройство, заявление, явка, сдача нелегала</td></tr>
+          <tr><td><strong>FIB</strong></td><td>Сдача нелегала, трудоустройство</td></tr>
+          <tr><td><strong>Government</strong></td><td>Секретарь, снятие судимости, лицензии, юр.помощь, голосование</td></tr>
+          <tr><td><strong>EMS</strong></td><td>Мед.помощь, документы, трудоустройство</td></tr>
+          <tr><td><strong>SANG</strong></td><td>Трудоустройство, КМБ</td></tr>
+          <tr><td><strong>WN</strong></td><td>Услуги СМИ, трудоустройство</td></tr>
+        </table>
+      </div>
+      <div class="alert yellow">
+        📌 Сотрудник госструктуры вправе потребовать немедленно покинуть территорию при несоответствии цели визита.
+      </div>
+      <div class="alert blue">
+        📌 Допуск посетителей на суд / Сенат — не ранее чем за 10 минут до начала, по документам. Лица без цели — выдворяются.
+      </div>
+    </div>
+  </div>
+
+  <!-- РАСПИСАНИЕ -->
+  <div class="section">
+    <div class="section-title purple">📅 Расписание мероприятий</div>
+    <div class="section-body">
+      <div class="table-wrap">
+        <table>
+          <tr><th>Время</th><th>Мероприятие</th><th>Грайф</th></tr>
+          <tr><td class="num">00:00</td><td>🚁 AIRDROP</td><td class="num">22:45</td></tr>
+          <tr><td class="num">04:00</td><td>🚁 AIRDROP</td><td class="num">03:45</td></tr>
+          <tr><td class="num">08:00</td><td>🚁 AIRDROP</td><td class="num">07:45</td></tr>
+          <tr><td class="num">10:00</td><td>📦 ТАЙНИКИ</td><td class="num">09:30</td></tr>
+          <tr><td class="num">10:45</td><td>🤝 ВЕРБОВКА АИЛ</td><td class="num">10:45</td></tr>
+          <tr><td class="num">12:00</td><td>🚁 AIRDROP</td><td class="num">11:45</td></tr>
+          <tr><td class="num">14:00</td><td>📦 ТАЙНИКИ</td><td class="num">13:30</td></tr>
+          <tr><td class="num">14:45</td><td>🏭 ЗАХВАТ ЦЕХОВ</td><td class="num">14:45</td></tr>
+          <tr><td class="num">16:00</td><td>🏝️ ОСТРОВ / ФЗ</td><td class="num">15:30</td></tr>
+          <tr><td class="num">18:00</td><td>📦 ТАЙНИКИ</td><td class="num">17:30</td></tr>
+          <tr><td class="num">18:45</td><td>🤝 ВЕРБОВКА АИЛ</td><td class="num">18:45</td></tr>
+          <tr><td class="num">20:00</td><td>🚁 AIRDROP</td><td class="num">19:45</td></tr>
+          <tr><td class="num">22:00</td><td>📦 ТАЙНИКИ</td><td class="num">21:30</td></tr>
+          <tr><td class="num">22:45</td><td>🏭 ЗАХВАТ ЦЕХОВ</td><td class="num">22:45</td></tr>
+          <tr><td class="num">24/7</td><td>📦 ПОСТАВКИ</td><td>—</td></tr>
+          <tr><td class="num">14:00–21:00</td><td>🏴 КАПТЫ</td><td>—</td></tr>
+        </table>
+      </div>
+      <div class="alert red">
+        ⚠️ <strong>USSS не участвует в захватах цехов</strong> (Правила захватов, п. 1.1). Не обязан реагировать на теракты (п. 3.6).
+      </div>
+    </div>
+  </div>
+
+  <!-- ДОСТУП НА ОБЪЕКТЫ -->
+  <div class="section">
+    <div class="section-title orange">🔑 Кто имеет доступ (Прил. №1, ст. 4)</div>
+    <div class="section-body">
+
+      <div class="card">
+        <h4>Форт Занкудо</h4>
+        <p>• Военнослужащие SANG</p>
+        <p>• Губернатор, Вице</p>
+        <p>• ГП и заместители</p>
+        <p>• Глава ДНБ и заместители</p>
+        <p>• Сотрудники госструктур во время спецопераций</p>
+        <p>• ОГП по распоряжению ГП</p>
+        <p>• EMS при плановых проверках</p>
+      </div>
+
+      <div class="card">
+        <h4>Офис FIB</h4>
+        <p>• Губернатор, Вице</p>
+        <p>• ГП и заместители</p>
+        <p>• Адвокаты (только КПЗ и в/из КПЗ)</p>
+        <p>• Глава ДНБ и заместители</p>
+        <p>• EMS (по вызову, плановые проверки)</p>
+        <p>• ОГП в рамках вызова</p>
+        <p>• Старший прокурор</p>
+        <p>• Сотрудники FIB</p>
+        <p>• Руководство госорганов (при задержании подчинённых)</p>
+        <p>• Госслужащие в сопровождении руководства ФРБ</p>
+        <p>• По пропуску Директора FIB / Губ / ГП</p>
+      </div>
+
+      <div class="card">
+        <h4>Капитолий (кроме холла)</h4>
+        <p>• Сотрудники Правительства</p>
+        <p>• EMS при вызове / плановых проверках</p>
+        <p>• Иные лица в сопровождении Правительства</p>
+        <p>• Участники / слушатели суда / Сената</p>
+        <p>• По пропуску Губ / Вице / ГП / Главы ДНБ</p>
+      </div>
+
+      <div class="card">
+        <h4>Участки LSPD / LSCSD (кроме холла)</h4>
+        <p>• Губернатор, Вице</p>
+        <p>• ГП и заместители</p>
+        <p>• Глава ДНБ и заместители</p>
+        <p>• ОГП</p>
+        <p>• Сотрудники правоохранительных структур при задержании</p>
+        <p>• Адвокаты (только КПЗ и в/из КПЗ)</p>
+        <p>• IB (только КПЗ и в/из КПЗ)</p>
+        <p>• EMS по вызову / плановые проверки</p>
+        <p>• Руководство (при задержании подчинённых)</p>
+        <p>• По пропуску Шефа / Шерифа / Губ / ГП</p>
+      </div>
+
+      <div class="card">
+        <h4>Здания мед. учреждений</h4>
+        <p>• Губернатор, Вице</p>
+        <p>• ГП и заместители</p>
+        <p>• Главы и заместители глав департаментов</p>
+        <p>• ОГП</p>
+        <p>• Сотрудники правоохранительных структур при вызове / правонарушении</p>
+        <p>• EMS</p>
+        <p>• Иные лица в сопровождении EMS (для услуг)</p>
+        <p>• По пропуску Главного врача EMS</p>
+      </div>
+
+      <div class="card">
+        <h4>Кайо-Перико</h4>
+        <p>• Губернатор, Вице</p>
+        <p>• ГП и заместители</p>
+        <p>• Глава ДНБ и заместители</p>
+        <p>• ОГП</p>
+        <p>• Сотрудники госструктур при исполнении</p>
+        <p><strong>Аэропорт</strong> Кайо-Перико — открытая территория</p>
+      </div>
+
+      <div class="card">
+        <h4>WN</h4>
+        <p>• Губернатор, Вице</p>
+        <p>• ГП и заместители</p>
+        <p>• Главы департаментов и заместители</p>
+        <p>• ОГП</p>
+        <p>• Сотрудники правоохранительных структур при вызове / правонарушении</p>
+        <p>• EMS при вызове / плановых проверках</p>
+        <p>• По пропуску Директора WN</p>
+        <p>• Посетители допускаются в холл WN</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ПРИМЕЧАНИЯ -->
+  <div class="section">
+    <div class="section-title blue">📝 Важные примечания (Прил. №1)</div>
+    <div class="section-body">
+      <div class="card">
+        <p>• <strong>КПЗ</strong> — комната с клетками, допросные и коридоры рядом.</p>
+        <p>• Адвокаты проходят в КПЗ только по вызову, после — 5 минут на покидание.</p>
+        <p>• EMS в КПЗ — при вызове / освидетельствовании, после — 5 минут на покидание.</p>
+        <p>• Сотрудники LSPD имеют беспрепятственный доступ к участкам LSPD; LSCSD — к участкам Шерифа.</p>
+      </div>
+      <div class="card">
+        <h4>Правила посещения здания суда (Прил. №1, ст. 5)</h4>
+        <p>• Допуск по документам.</p>
+        <p>• Отказ в допуске: без документов, отказ от досмотра, запрещённые предметы, неприемлемый вид, опьянение, с животными.</p>
+        <p>• Судья вправе ограничить доступ в зал суда, если заседание закрытое.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- РАБОЧЕЕ ВРЕМЯ -->
+  <div class="section">
+    <div class="section-title green">⏰ Рабочее время USSS</div>
+    <div class="section-body">
+      <div class="card">
+        <h4>График Правительства (Устав Правительства, ст. 5 п.1)</h4>
+        <p>• ПН–ПТ: 11:00–21:00</p>
+        <p>• СБ–ВС: 11:00–20:00</p>
+      </div>
+      <div class="card">
+        <h4>Работа вне времени (Устав Правительства, ст. 5 п.2)</h4>
+        <p>Руководящий состав <strong>Департамента юстиции, Коллегии адвокатов и USSS</strong> — могут работать вне рабочего времени за пределами Мэрии (по служебной необходимости).</p>
+        <p>Остальные — только в здании Мэрии.</p>
+      </div>
+      <div class="card">
+        <h4>Перерыв</h4>
+        <p>• 1–2 часа, если до перерыва был на месте ≥2 часов.</p>
+        <p>• Если был на месте >6 часов — дополнительный перерыв до 2 часов.</p>
+        <p>• USSS могут быть отозваны с перерыва по приказу руководства в случае оперативной необходимости.</p>
+      </div>
+      <div class="card">
+        <h4>Отпуск</h4>
+        <p>• 7 суток в 1 календарный месяц (после прохождения стажировки).</p>
+        <p>• Работодатель вправе отказать, если превышает месячную норму.</p>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  🛡️ Majestic USSS Orlando — Памятка · Все важное под рукой
+</footer>
+
+<button id="topBtn" title="Наверх">↑</button>
+
+<script src="js/main.js"></script>
+<script src="js/search.js"></script>
+
+</body>
+</html>
